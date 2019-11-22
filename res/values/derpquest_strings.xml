@@ -559,4 +559,8 @@
     <string name="lock_ownerinfo_font_dialog_title">Select lock ownerinfo font</string>
     <string name="lockowner_font_size_title">Owner info font size</string>
 
+    <!-- Hide On Lockscreen -->
+    <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
+    <string name="hide_lockscreen_status_bar_summary">Touch status bar to toggle visibility</string>
+
 </resources>

@@ -602,4 +602,70 @@
     <string name="lockscreen_clock_selection_gradient_full">Full gradient clock</string>
     <string name="lockscreen_clock_selection_gradient_likeqs">Monochrome gradient clock</string>
 
+    <!-- Lockscreen Date styles -->
+    <string name="lockscreen_date_selection_title">Date style</string>
+    <string name="lockscreen_date_selection_default">Default</string>
+    <string name="lockscreen_date_selection_str_box">Semi-transparent box</string>
+    <string name="lockscreen_date_selection_str_round">Semi-transparent box (round)</string>
+    <string name="lockscreen_date_selection_str_accent">Rounded, simple and with accent</string>
+    <string name="lockscreen_date_selection_str_accent_day">Rounded, simple and with accent (alt)</string>
+    <string name="lockscreen_date_selection_str_accent_transparent">Rounded, transparent and with accent</string>
+    <string name="lockscreen_date_selection_str_accent_transparent_day">Rounded, transparent and with accent (alt)</string>
+    <string name="lockscreen_date_selection_str_gradient">Gradient</string>
+    <string name="lockscreen_date_selection_str_border_accent">Dark with accented borders</string>
+    <string name="lockscreen_date_selection_str_border_gradient">Dark with gradient borders</string>
+
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="system_animation_title">System</string>
+    <string name="activity_open_title">Activity open animation</string>
+    <string name="activity_close_title">Activity close animation</string>
+    <string name="task_open_title">Task open animation</string>
+    <string name="task_open_behind_title">Task open behind animation</string>
+    <string name="task_close_title">Task close animation</string>
+    <string name="task_move_to_front_title">Move to front animation</string>
+    <string name="task_move_to_back_title">Move to back animation</string>
+    <string name="wallpaper_open_title">Wallpaper open animation</string>
+    <string name="wallpaper_close_title">Wallpaper close animation</string>
+    <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
+    <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
+    <string name="animation_duration_title">Animation duration</string>
+    <string name="title_animation_no_override">Prevent app overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
+    <string name="animation_duration_default">Default</string>
+
+    <!-- Force disable transition animation -->
+    <string name="disable_transition_animations_title">Disable transition animations</string>
+    <string name="disable_transition_animations_summary">Force disable all transition animations</string>
+
+    <!-- Statusbar logo -->
+    <string name="status_bar_logo_category_title">Statusbar Logo</string>
+    <string name="status_bar_logo_category_summary">Enable to display logo in the status bar</string>
+    <string name="status_bar_logo_title">DerpQuest logo</string>
+    <string name="status_bar_logo_right">Right</string>
+    <string name="status_bar_logo_left">Left</string>
+    <string name="status_bar_logo_disabled">Disabled</string>
+    <string name="status_bar_logo_style_title">DerpQuest logo style</string>
+    <string name="status_bar_logo_color_title">Select color</string>
+
+    <!-- Rounded corners -->
+    <string name="corners_category_title">Rounded corners</string>
+    <string name="corners_category_summary">Adjust rounded corners and padding</string>
+    <string name="corners_title">Customize rounded corners</string>
+    <string name="corner_radius">Rounded corner radius</string>
+    <string name="content_padding">Corner content padding</string>
+    <string name="status_bar_padding">Statusbar extra padding</string>
+    <string name="corner_fwvals">Use framework values</string>
+    <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
+    <string name="unit_pixels">dp</string>
+
+    <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_default">Default</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+
 </resources>

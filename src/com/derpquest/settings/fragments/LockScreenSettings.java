@@ -49,6 +49,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
 
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+    private static final String LOCK_CLOCK_STYLE = "lockscreen_clock_selection";
     private static final String LOCK_DATE_FONTS = "lock_date_fonts";
     private static final String CLOCK_FONT_SIZE  = "lockclock_font_size";
     private static final String DATE_FONT_SIZE  = "lockdate_font_size";
@@ -58,6 +59,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
 
     private ListPreference mLockClockFonts;
+    private ListPreference mLockClockStyle;
     private ListPreference mLockDateFonts;
     private ListPreference mLockOwnerInfoFonts;
     private CustomSeekBarPreference mClockFontSize;
@@ -102,6 +104,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                 LOCKSCREEN_ALBUM_ART_FILTER, 0);
         mBlurSeekbar = (SystemSettingSeekBarPreference) findPreference(LOCKSCREEN_MEDIA_BLUR);
         mBlurSeekbar.setEnabled(artFilter > 2);
+
+        // Lockscren Clock Style
+        mLockClockStyle = (ListPreference) findPreference(LOCK_CLOCK_STYLE);
+        mLockClockStyle.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.LOCKSCREEN_CLOCK_SELECTION, 0)));
+        mLockClockStyle.setSummary(mLockClockStyle.getEntry());
+        mLockClockStyle.setOnPreferenceChangeListener(this);
 
         // Lockscren Clock Fonts
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
@@ -166,6 +175,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_ALBUM_ART_FILTER, value);
             mBlurSeekbar.setEnabled(value > 2);
+            return true;
+        }else if (preference == mLockClockStyle) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_CLOCK_SELECTION,
+                    Integer.valueOf((String) newValue));
+            mLockClockStyle.setValue(String.valueOf(newValue));
+            mLockClockStyle.setSummary(mLockClockStyle.getEntry());
             return true;
         }else if (preference == mLockClockFonts) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONTS,

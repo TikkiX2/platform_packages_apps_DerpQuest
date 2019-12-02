@@ -584,4 +584,15 @@
     <string name="status_bar_carrier_color">Carrier label color</string>
     <string name="status_bar_carrier_size">Carrier label size</string>
     <string name="status_bar_carrier_font_style_title">Carrier Label Font</string>
+
+    <!-- Lockscreen clock styles -->
+    <string name="lockscreen_clock_styles_category">Lockscreen styles</string>
+    <string name="lockscreen_clock_selection_title">Clock style</string>
+    <string name="lockscreen_clock_selection_digital">Default</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digital (bold)</string>
+    <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy (bold)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy with accent</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy with accent (alt)</string>
+
 </resources>

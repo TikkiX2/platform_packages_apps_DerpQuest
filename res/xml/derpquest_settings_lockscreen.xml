@@ -44,6 +44,17 @@
         android:dependency="sysui_keyguard_show_battery_bar"
         android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:title="@string/lockscreen_clock_styles_category"
+        android:key="lockscreen_style_cat">
+
+    <ListPreference
+        android:key="lockscreen_clock_selection"
+        android:title="@string/lockscreen_clock_selection_title"
+        android:entries="@array/lockscreen_clock_selection_entries"
+        android:entryValues="@array/lockscreen_clock_selection_values"
+        android:defaultValue="0" />
+
     <ListPreference
         android:key="lock_clock_fonts"
         android:title="@string/lock_clock_font_title"
@@ -52,6 +63,17 @@
         android:entryValues="@array/lock_clock_fonts_values"
         android:summary="@string/lock_clock_font_summary"
         android:persistent="false" />
+
+    <com.derpquest.settings.preferences.CustomSeekBarPreference
+        android:key="lockclock_font_size"
+        android:title="@string/lockclock_font_size_title"
+        android:max="101"
+        settings:min="65"
+        settings:units="dp"
+        android:persistent="false"
+        android:defaultValue="78" />
+
+    </PreferenceCategory>
 
     <ListPreference
         android:key="lock_date_fonts"
@@ -81,6 +103,14 @@
         android:persistent="false"
         android:defaultValue="78" />
 
+    <com.derpquest.settings.preferences.CustomSeekBarPreference
+        android:key="lockdate_font_size"
+        android:title="@string/lockdate_font_size_title"
+        android:max="25"
+        settings:min="10"
+        settings:units="dp"
+        android:defaultValue="18"
+        android:persistent="false" />
 
     <com.derpquest.settings.preferences.CustomSeekBarPreference
         android:key="lockowner_font_size"

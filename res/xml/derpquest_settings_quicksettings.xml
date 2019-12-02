@@ -175,4 +175,12 @@
 
     </PreferenceCategory>
 
+
+    <Preference
+         android:key="carrierlabel_settings"
+         android:title="@string/carrier_label_category_title"
+         android:summary="@string/carrier_label_category_summary"
+         android:fragment="com.derpquest.settings.fragments.CarrierLabelSettings" />
+
+
 </PreferenceScreen>

@@ -361,16 +361,21 @@
         <item>2</item>
     </string-array>
 
-   <string-array name="status_bar_logo_style_entries" translatable="false">
-        <item>DerpQuest</item>
-        <item>DerpQuest 1</item>
-        <item>DerpQuest 2</item>
-        <item>Owl</item>
-        <item>Owl 1</item>
-        <item>Q</item>
-        <item>OnePlus</item>
-        <item>Trident</item>
-        <item>Android</item>
+    <!-- Lockscreen clock styles -->
+    <string-array name="lockscreen_clock_selection_entries" translatable="false">
+        <item>@string/lockscreen_clock_selection_digital</item>
+        <item>@string/lockscreen_clock_selection_digital_bold</item>
+        <item>@string/lockscreen_clock_selection_sammy</item>
+        <item>@string/lockscreen_clock_selection_sammy_bold</item>
+        <item>@string/lockscreen_clock_selection_sammy_accent</item>
+        <item>@string/lockscreen_clock_selection_sammy_accent_alt</item>
+        <item>@string/lockscreen_clock_selection_shishu_dreams</item>
+        <item>@string/lockscreen_clock_selection_shishu_immensity</item>
+        <item>@string/lockscreen_clock_selection_shishu_nerves</item>
+        <item>@string/lockscreen_clock_selection_gradient_btlglogo</item>
+        <item>@string/lockscreen_clock_selection_gradient_shishu</item>
+        <item>@string/lockscreen_clock_selection_gradient_full</item>
+        <item>@string/lockscreen_clock_selection_gradient_likeqs</item>
     </string-array>
 
     <string-array name="status_bar_logo_style_values" translatable="false">
@@ -383,6 +388,10 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 
     <!-- Screen off animation -->

@@ -79,4 +79,27 @@
             android:key="powermenu_logout"
             android:title="@string/powermenu_logout"
             android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:title="@string/panel_porn_title">
+
+        <com.derpquest.settings.preferences.CustomSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            android:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight="%"
+            android:defaultValue="100" />
+
+        <com.derpquest.settings.preferences.CustomSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:max="100"
+            android:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight="%"
+            android:defaultValue="50" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

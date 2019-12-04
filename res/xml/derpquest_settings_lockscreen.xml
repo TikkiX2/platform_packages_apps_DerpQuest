@@ -192,40 +192,5 @@
             android:dependency="lockscreen_visualizer_enabled"
             android:defaultValue="false"/>
     </PreferenceCategory>
-    <com.msm.xtended.preferences.CustomSeekBarPreference
-        android:key="lockclock_font_size"
-        android:title="@string/lockclock_font_size_title"
-        android:max="101"
-        settings:min="65"
-        settings:units="dp"
-        android:persistent="false"
-        android:defaultValue="78" />
-
-    <com.msm.xtended.preferences.CustomSeekBarPreference
-        android:key="lockdate_font_size"
-        android:title="@string/lockdate_font_size_title"
-        android:max="25"
-        settings:min="10"
-        settings:units="dp"
-        android:defaultValue="18"
-        android:persistent="false" />
-
-    <Preference
-        android:key="omnijaws_settings"
-        android:title="@string/weather_title"
-        android:summary="@string/weather_summary"
-        android:fragment="com.msm.xtended.fragments.OmniJawsSettings" />
-
-    <com.msm.xtended.preferences.SecureSettingSwitchPreference
-        android:key="hide_lock_shortcuts"
-        android:title="@string/lockscreen_hide_shortcuts_title"
-        android:summary="@string/lockscreen_hide_shortcuts_summary"
-        android:defaultValue="false" />
-
-    <com.msm.xtended.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_battery_info"
-        android:title="@string/lockscreen_battery_info_title"
-        android:summary="@string/lockscreen_battery_info_summary"
-	android:defaultValue="true" />
 
 </PreferenceScreen>

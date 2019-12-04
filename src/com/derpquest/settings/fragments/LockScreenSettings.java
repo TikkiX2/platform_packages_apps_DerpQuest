@@ -38,7 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.derpquest.settings.preferences.SecureSettingMasterSwitchPreference;
 import com.derpquest.settings.preferences.SystemSettingListPreference;
 import com.derpquest.settings.preferences.SystemSettingSeekBarPreference;
-import com.msm.xtended.preferences.CustomSeekBarPreference;
+import com.derpquest.settings.preferences.CustomSeekBarPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {

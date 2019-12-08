@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.text.InputFilter;
 import androidx.preference.ListPreference;
 import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
@@ -35,35 +36,42 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.telephony.TelephonyManager;
-import android.text.format.DateFormat;
 import android.text.Spannable;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
+import android.view.Gravity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.aosip.aosipUtils;
 
 import com.android.settings.R;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 
-import com.derpquest.settings.preferences.SystemSettingSwitchPreference;
 import com.derpquest.settings.preferences.CustomSeekBarPreference;
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-import com.android.internal.logging.nano.MetricsProto;
+import com.derpquest.settings.preferences.SystemSettingListPreference;
+import com.derpquest.settings.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class CarrierLabelSettings extends SettingsPreferenceFragment implements
-	Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener {
 
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
     private static final String STATUS_BAR_CARRIER_FONT_SIZE  = "status_bar_carrier_font_size";
     private static final String CARRIER_FONT_STYLE  = "status_bar_carrier_font_style";
+    private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -72,11 +80,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
     private ColorPickerPreference mCarrierColorPicker;
     private CustomSeekBarPreference mStatusBarCarrierSize;
     private ListPreference mCarrierFontStyle;
+    private SystemSettingListPreference mShowCarrierLabel;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.derpquest_settings_carrierlabel);
+        addPreferencesFromResource(R.xml.settings_carrier_label);
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
@@ -86,6 +95,23 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
         // custom carrier label
         mCustomCarrierLabel = (PreferenceScreen) findPreference(CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
+
+	    mShowCarrierLabel = (SystemSettingListPreference) findPreference(KEY_CARRIER_LABEL);
+        int showCarrierLabel = Settings.System.getInt(resolver,
+        Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
+        CharSequence[] NonNotchEntries = { getResources().getString(R.string.show_carrier_disabled),
+                getResources().getString(R.string.show_carrier_keyguard),
+                getResources().getString(R.string.show_carrier_statusbar), getResources().getString(
+                        R.string.show_carrier_enabled) };
+        CharSequence[] NotchEntries = { getResources().getString(R.string.show_carrier_disabled),
+                getResources().getString(R.string.show_carrier_keyguard) };
+        CharSequence[] NonNotchValues = {"0", "1" , "2", "3"};
+        CharSequence[] NotchValues = {"0", "1"};
+        mShowCarrierLabel.setEntries(aosipUtils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
+        mShowCarrierLabel.setEntryValues(aosipUtils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
+        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
+        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
+        mShowCarrierLabel.setOnPreferenceChangeListener(this);
 
         mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
             mCarrierColorPicker.setOnPreferenceChangeListener(this);
@@ -97,7 +123,7 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
 
         mStatusBarCarrierSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
         int StatusBarCarrierSize = Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 14);
+                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 11);
         mStatusBarCarrierSize.setValue(StatusBarCarrierSize / 1);
         mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
 
@@ -141,8 +167,27 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
                 STATUS_BAR_CARRIER_FONT_STYLE, showCarrierFont);
             mCarrierFontStyle.setSummary(mCarrierFontStyle.getEntries()[index]);
             return true;
-        }
+        }  else if (preference == mShowCarrierLabel) {
+            int value = Integer.parseInt((String) newValue);
+            updateCarrierLabelSummary(value);
+            return true;
+		     }
          return false;
+    }
+
+    private void updateCarrierLabelSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Carrier Label disabled
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_disabled));
+        } else if (value == 1) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_keyguard));
+        } else if (value == 2) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_statusbar));
+        } else if (value == 3) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_enabled));
+        }
     }
 
     public boolean onPreferenceTreeClick(Preference preference) {
@@ -152,11 +197,19 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment implements
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
-            // Set an EditText view to get user input
+						LinearLayout container = new LinearLayout(getActivity());
+            container.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            lp.setMargins(55, 20, 55, 20);
             final EditText input = new EditText(getActivity());
+            int maxLength = 25;
+						input.setLayoutParams(lp);
+						input.setGravity(android.view.Gravity.TOP| Gravity.START);
             input.setText(TextUtils.isEmpty(mCustomCarrierLabelText) ? "" : mCustomCarrierLabelText);
-            input.setSelection(input.getText().length());
-            alert.setView(input);
+            input.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+						container.addView(input);
+            alert.setView(container);
             alert.setPositiveButton(getString(android.R.string.ok),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {

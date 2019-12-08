@@ -45,22 +45,46 @@
             android:defaultValue="true" />
 
     <PreferenceCategory
+        android:title="@string/doze_brightness_category">
+
+        <com.derpquest.settings.preferences.CustomSeekBarPreference
+            android:key="ambient_doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:summary="@string/ambient_doze_brightness_summary"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+
+        <com.derpquest.settings.preferences.CustomSeekBarPreference
+            android:key="ambient_pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:summary="@string/ambient_pulse_brightness_summary"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
             android:title="@string/incall_vibrate_connect_title"
+            android:summary="@string/incall_vibrate_connect_summary"
             android:defaultValue="false" />
 
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_callwaiting"
             android:title="@string/incall_vibrate_call_wait_title"
+            android:summary="@string/incall_vibrate_call_wait_summary"
             android:defaultValue="false" />
 
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
+            android:summary="@string/incall_vibrate_disconnect_summary"
             android:defaultValue="false" />
 
     </PreferenceCategory>
@@ -84,6 +108,25 @@
             settings:interval="50"
             android:dependency="flash_on_call_waiting"/>
 
-      </PreferenceCategory>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notification_screen"
+        android:title="@string/notification_screen_title">
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="pulse_ambient_light"
+            android:title="@string/pulse_ambient_light_title"
+            android:summary="@string/pulse_ambient_light_summary"
+            android:defaultValue="false" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="pulse_ambient_light_color"
+            android:title="@string/pulse_ambient_light_color_title"
+            android:persistent="false"
+            android:dependency="pulse_ambient_light"
+            settings:defaultColorValue="0xFF3980FF" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

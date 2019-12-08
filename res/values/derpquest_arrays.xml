@@ -474,7 +474,7 @@
         <item>2</item>
         <item>0</item>
     </string-array>
-	
+
     <string-array name="period_type_entries">
         <item>@string/since_reset</item>
         <item>@string/since_boot</item>
@@ -608,19 +608,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-    </string-array>
-
-    <!-- Screen off animation -->
-    <string-array name="screen_off_animation_entries">
-        <item>@string/screen_off_animation_default</item>
-        <item>@string/screen_off_animation_crt</item>
-        <item>@string/screen_off_animation_scale</item>
-    </string-array>
-
-    <string-array name="screen_off_animation_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
     </string-array>
 
 </resources>

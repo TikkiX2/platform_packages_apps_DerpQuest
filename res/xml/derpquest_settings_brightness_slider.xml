@@ -36,4 +36,10 @@
         android:summary="@string/qs_show_minmax_brightness_summary"
         android:defaultValue="false" />
 
+    <com.derpquest.settings.preferences.SecureSettingSwitchPreference
+        android:key="brightness_slider_qs_unexpanded"
+        android:title="@string/brightness_slider_qs_unexpanded"
+        android:summary="@string/brightness_slider_qs_unexpanded_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

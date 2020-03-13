@@ -17,15 +17,15 @@
 
     <!-- Categories -->
     <string name="button_title">Bottoni</string>
-    <string name="gestures_title">Gesture</string>
+    <string name="gestures_title">Gesti</string>
     <string name="lockscreen_title">Schermata di blocco</string>
-    <string name="misc_title">Miscellanea</string>
+    <string name="misc_title">Varie</string>
     <string name="navbar_title">Barra di navigazione</string>
     <string name="notifications_title">Notifiche</string>
-    <string name="powermenu_title">Menu spegnimento</string>
-    <string name="quicksettings_title">Quick Settings</string>
+    <string name="powermenu_title">Menù spegnimento</string>
+    <string name="quicksettings_title">Impostazioni rapide</string>
     <string name="recents_title">App recenti</string>
-    <string name="statusbar_title">Status bar</string>
+    <string name="statusbar_title">Barra di stato</string>
     <string name="volume_title">Impostazioni volume</string>
     <string name="theming_title">Temi</string>
     <string name="animations_title">Animazioni</string>
@@ -34,7 +34,7 @@
 
     <!-- General strings -->
     <string name="ok">OK</string>
-    <string name="reset">Resetta</string>
+    <string name="reset">Ripristina</string>
     <string name="cancel">Annulla</string>
     <string name="save">Salva</string>
     <string name="default_string">Predefinito</string>
@@ -47,7 +47,7 @@
     <string name="hex">Hex:</string>
     <string name="hex_hint" translatable="false">#FFDDDDDD</string>
     <string name="hex_check_button_text">ANTEPRIMA</string>
-    <string name="hex_reset_button_text">RESET</string>
+    <string name="hex_reset_button_text">RIPRISTINA</string>
     <string name="set">Imposta</string>
     <string name="color_default">Predefinito</string>
     <string name="color_right_arrow" translatable="false">"→"</string>
@@ -57,7 +57,7 @@
     <!-- Navbar options -->
     <string name="enable_navbar_title">Abilita</string>
     <string name="enable_navbar_summary">Attiva o disattiva la barra di navigazione</string>
-    <string name="nav_bar_tuner_title">Tuner barra di navigazione</string>
+    <string name="nav_bar_tuner_title">Sintonizzatore barra di navigazione</string>
     <string name="nav_bar_tuner_summary">Riordina e cambia i tasti della barra di navigazione</string>
 
     <!-- Lockscreen icons -->
@@ -80,7 +80,7 @@
     <string name="hardware_keys_vol_key_title">Tasto volume</string>
 
     <!-- Buttons backlight timeout -->
-    <string name="backlight_timeout_title">Timeout retroilluminazione tasti</string>
+    <string name="backlight_timeout_title">Durata retroilluminazione tasti</string>
     <string name="backlight_timeout_on">Sempre accesi</string>
     <string name="backlight_timeout_3s">3 sec</string>
     <string name="backlight_timeout_default">5 sec (predefinito)</string>
@@ -94,7 +94,7 @@
     <!-- Enable keys backlight-->
     <string name="button_brightness_sw_title">Abilita retroilluminazione</string>
     <string name="button_backlight_on_touch_only_title">Al tocco</string>
-    <string name="button_backlight_on_touch_only_summary">Abilita retroilluminazione con timer al tocco</string>
+    <string name="button_backlight_on_touch_only_summary">Abilita la durata della retroilluminazione al tocco</string>
 
     <!-- HW Keys customization -->
     <string name="action_value_default_action" translatable="false">default</string>
@@ -115,7 +115,7 @@
     <string name="action_entry_select_app">Scegli applicazione</string>
     <string name="action_entry_custom_action">Select azione personalizzata</string>
     <string name="hardware_keys_home_key_title">Tasto home</string>
-    <string name="hardware_keys_menu_key_title">Tasto menu</string>
+    <string name="hardware_keys_menu_key_title">Tasto menù</string>
     <string name="hardware_keys_assist_key_title">Tasto ricerca</string>
     <string name="hardware_keys_appswitch_key_title">Tasto recenti</string>
     <string name="hardware_keys_back_key_title">Tasto indietro</string>
@@ -174,28 +174,28 @@
 
     <!-- Statusbar net monitor -->
     <string name="network_traffic_state_title">Indicatore traffico di rete</string>
-    <string name="traffic_statusbar">Statusbar</string>
-    <string name="traffic_expanded_statusbar">Header QS</string>
+    <string name="traffic_statusbar">Barra di stato</string>
+    <string name="traffic_expanded_statusbar">Intestazione impostazioni rapide</string>
     <string name="network_traffic_autohide_threshold_title">Nascondi indicatore al di sotto della velocità indicata (KB/s)</string>
     <string name="network_traffic_arrow">Mostra frecce</string>
     <string name="network_traffic_arrow_summary">Mostra le frecce di traffico rete</string>
     <string name="network_traffic_type">Seleziona tipo attività di rete</string>
-    <string name="show_network_traffic_combined">Combinata (Upload + Download)</string>
+    <string name="show_network_traffic_combined">Combinata (Uscita + Entrata)</string>
     <string name="show_network_traffic_dynamic">Dinamica</string>
-    <string name="show_network_traffic_up">Upload</string>
-    <string name="show_network_traffic_down">Download</string>
+    <string name="show_network_traffic_up">Uscita</string>
+    <string name="show_network_traffic_down">Entrata</string>
     <string name="show_network_traffic_all">Entrambe</string>
-    <string name="nettraf_font_size">Dimensione font</string>
+    <string name="nettraf_font_size">Dimensione carattere</string>
 
     <!-- Statusbar double tap to sleep -->
-    <string name="double_tap_to_sleep_title">Doppio tocco sulla status bar per spegnere lo schermo</string>
-    <string name="double_tap_to_sleep_summary">Tocca due volte sulla statusbar per bloccare il dispositivo</string>
+    <string name="double_tap_to_sleep_title">Doppio tocco sulla barra di stato</string>
+    <string name="double_tap_to_sleep_summary">Tocca due volte sulla barra di stato per spegnere lo schermo</string>
     <!-- Lockscreen double tap to sleep -->
-    <string name="double_tap_sleep_lockscreen_title">Doppio tocco schermata di blocco per spegnere lo schermo</string>
-    <string name="double_tap_sleep_lockscreen_summary">Tocca due volte in qualsiasi punto della lockscreen per spegnere lo schermo</string>
+    <string name="double_tap_sleep_lockscreen_title">Doppio tocco schermata di blocco </string>
+    <string name="double_tap_sleep_lockscreen_summary">Tocca due volte in qualsiasi punto della schrmata di blocco per spegnere lo schermo</string>
 
     <!-- Disable power menu on secure lock screen -->
-    <string name="lockscreen_power_menu_disabled_title">Disabilita menù spegnimento quando il telefono è bloccato</string>
+    <string name="lockscreen_power_menu_disabled_title">Disabilita menù spegnimento quando bloccato</string>
     <string name="lockscreen_power_menu_disabled_summary">Disabilità il menù di spegnimento quando il telefono è bloccato e protetto da password.</string>
 
     <!-- Battery Bar -->
@@ -218,9 +218,9 @@
     <string name="qstile_requires_unlocking_summary">I seguenti toggle richiedono lo sblocco quando il dispositivo è bloccato per essere utilizzati: modalità aereo, risparmio batteria, bluetooth, dati mobili, risparmio dati, nfc and wifi.</string>
 
     <!-- QS blur -->
-    <string name="blur_quicksettings">Effetto sfocato Quick Settings (beta)</string>
-    <string name="blur_quicksettings_subtitle">applica un effetto sfocato dietro i quicksettings</string>
-    <string name="qs_blur_alpha_title">Alpha sfocatura</string>
+    <string name="blur_quicksettings">Effetto sfocato impostazioni rapide (beta)</string>
+    <string name="blur_quicksettings_subtitle">applica un effetto sfocato dietro il pannello delle impostazioni rapide</string>
+    <string name="qs_blur_alpha_title">ASfocatura alfa</string>
     <string name="qs_blur_alpha_summary">Imposta la transparenza della sfocatura</string>
     <string name="qs_blur_intensity_title">Intensità sfocatura</string>
     <string name="qs_blur_intensity_summary">Imposta il raggio/intensità della sfocatura</string>
@@ -249,8 +249,8 @@
     <string name="clock_seconds_display">Mostra secondi</string>
     <string name="clock_date_display">Data</string>
     <string name="clock_date_display_summary">Mostra data personalizzata a sinistra dell\'ora</string>
-    <string name="clock_date_display_small">Dimensione font piccola</string>
-    <string name="clock_date_display_normal">Dimensione font media</string>
+    <string name="clock_date_display_small">Dimensione carattere piccola</string>
+    <string name="clock_date_display_normal">Dimensione carattere media</string>
     <string name="clock_date_style">Stile data</string>
     <string name="clock_date_style_normal">Normale</string>
     <string name="clock_date_style_lowercase">Minuscolo</string>
@@ -264,14 +264,14 @@
     <string name="clock_date_position">Posizione data</string>
 
     <!-- Statusbar Clock Font Style & Size -->
-    <string name="status_bar_clock_font_style_title">Stile font ora</string>
-    <string name="status_bar_clock_font_size_title">Dimensione font ora</string>
+    <string name="status_bar_clock_font_style_title">Stile carattere</string>
+    <string name="status_bar_clock_font_size_title">Dimensione carattere dell\'orologio</string>
 
     <!-- Lock Clock Fonts -->
-    <string name="lock_clock_font_title">Opzioni font ora</string>
-    <string name="lock_clock_font_summary">Cambia il font predefinito dell\'orologio della schermata di blocco</string>
-    <string name="lock_clock_font_dialog_title">Scegli font orologio schermata di blocco</string>
-    <string name="lock_clock_font_stock">Normale (default)</string>
+    <string name="lock_clock_font_title">Opzioni carattere orologio</string>
+    <string name="lock_clock_font_summary">Cambia il carattere predefinito dell\'orologio della schermata di blocco</string>
+    <string name="lock_clock_font_dialog_title">Scegli il carattere dell\'orologio per la schermata di blocco</string>
+    <string name="lock_clock_font_stock">Normale (predefinito)</string>
     <string name="lock_clock_font_bold">Bold</string>
     <string name="lock_clock_font_italic">Italic</string>
     <string name="lock_clock_font_bold_italic">Bold Italic</string>
@@ -338,19 +338,19 @@
     <string name="lockscreen_cover_filter_gradientblur">Sfocatura graduale</string>
 
     <!-- Three-fingers-swipe to screenshot -->
-    <string name="three_finger_gesture">Gesture con tre dita</string>
-    <string name="three_finger_gesture_summary">Fai swipe con tre dita per fare uno screenshot</string>
+    <string name="three_finger_gesture">Gesti tre dita</string>
+    <string name="three_finger_gesture_summary">Scorri sullo schermo con tre dita per fare uno screenshot</string>
 
     <!-- Volume Steps -->
-    <string name="volume_steps_title">Volume steps</string>
-    <string name="volume_steps_alarm_title">Volume steps: Sveglia</string>
-    <string name="volume_steps_dtmf_title">Volume steps: DTMF</string>
-    <string name="volume_steps_music_title">Volume steps: Musica</string>
-    <string name="volume_steps_notification_title">Volume steps: Notifiche</string>
-    <string name="volume_steps_ring_title">Volume steps: Suoneria</string>
-    <string name="volume_steps_system_title">Volume steps: Sistema</string>
-    <string name="volume_steps_voice_call_title">Volume steps: Chiamata vocale</string>
-    <string name="volume_steps_reset">Resetta</string>
+    <string name="volume_steps_title">Livelli volume</string>
+    <string name="volume_steps_alarm_title">Livello volume: Sveglia</string>
+    <string name="volume_steps_dtmf_title">Livello volume: DTMF</string>
+    <string name="volume_steps_music_title">Livello volume: Musica</string>
+    <string name="volume_steps_notification_title">VLivello volume: Notifiche</string>
+    <string name="volume_steps_ring_title">Livello volume: Suoneria</string>
+    <string name="volume_steps_system_title">Livello volume: Sistema</string>
+    <string name="volume_steps_voice_call_title">Livello volume: Chiamata vocale</string>
+    <string name="volume_steps_reset">Ripristina</string>
     <string name="volume_steps_60" translatable="false">60</string>
     <string name="volume_steps_45" translatable="false">45</string>
     <string name="volume_steps_30" translatable="false">30</string>
@@ -359,18 +359,18 @@
     <string name="volume_steps_5" translatable="false">5</string>
 
     <!-- Quick Settings brightness slider -->
-    <string name="qs_show_brightness_title">Slider luminosità</string>
-    <string name="qs_show_brightness_summary">Mostra slider luminosità nel pannello dei quick settings</string>
-    <string name="qs_brightness_position_bottom_title">Slider luminosità in basso</string>
-    <string name="qs_brightness_position_bottom_summary">Mostra lo slider della luminosità sotto i quick settings</string>
+    <string name="qs_show_brightness_title">Cursore della luminosità</string>
+    <string name="qs_show_brightness_summary">Mostra il cursore della luminosità nel pannello delle impostazioni rapide</string>
+    <string name="qs_brightness_position_bottom_title">Cursore della luminosità in basso</string>
+    <string name="qs_brightness_position_bottom_summary">Mostra il cursore della luminosità sotto le impostazioni rapide</string>
     <string name="qs_show_auto_brightness_title">Icona luminosità adattiva</string>
-    <string name="qs_show_auto_brightness_summary">Mostra un toggle per la luminosità adattiva alla fine dello slider della luminosità</string>
+    <string name="qs_show_auto_brightness_summary">Mostra un toggle per la luminosità adattiva alla fine del cursore della luminosità</string>
     <string name="qs_show_minmax_brightness_title">Icone Min-Max </string>
-    <string name="qs_show_minmax_brightness_summary">Mostra i tasti + - per controllare la luminosità vicino lo slider</string>
+    <string name="qs_show_minmax_brightness_summary">Mostra i tasti + - per controllare la luminosità vicino al cursore</string>
 
     <!-- QS security footer -->
-    <string name="qs_show_secure_title">Security footer</string>
-    <string name="qs_show_secure_summary">Show a conditional security footer</string>
+    <string name="qs_show_secure_title">Sicurezza piè di pagina</string>
+    <string name="qs_show_secure_summary">Mostra le condizioni di sicurezza nel piè di pagina delle impostazioni rapide</string>
 
     <!-- Battery Styles -->
     <string name="battery_percent_title">Percentuale batteria</string>
@@ -392,25 +392,25 @@
     <string name="status_bar_battery_text_charging_summary">Mostra sempre la percentuale batteria durante la carica</string>
 
     <!-- QS settings categories -->
-    <string name="category_tiles_title">Tiles area</string>
-    <string name="category_footer_title">Footer area</string>
-    <string name="category_header_title">Header area</string>
+    <string name="category_tiles_title">Area tile</string>
+    <string name="category_footer_title">Area piè di pagina</string>
+    <string name="category_header_title">Area di intestazione</string>
 
     <!-- QS drag handle -->
-    <string name="qs_drag_title">Show QS drag handle</string>
+    <string name="qs_drag_title">Mostra la maniglia di trascinamento nelle impostazioni rapide</string>
 
     <!-- QS settings icon -->
-    <string name="qs_always_show_settings_title">Mostra sempre icona impostazioni</string>
-    <string name="qs_always_show_settings_summary">Hides drag handle</string>
+    <string name="qs_always_show_settings_title">Mostra sempre l\'icona delle impostazioni</string>
+    <string name="qs_always_show_settings_summary">Nascondi la maniglia di trascinamento</string>
 
     <!-- QS footer text -->
-    <string name="derp_footer_text_show_title">Mostra testo sul footer dei QS</string>
-    <string name="derp_footer_text_string_title">Personalizza testo footer</string>
+    <string name="derp_footer_text_show_title">Mostra testo sul piè di pagina</string>
+    <string name="derp_footer_text_string_title">Personalizza il testo piè di pagina</string>
     <string name="derp_footer_text_string_summary">Lascialo vuote per il testo predefinito #DerpFest</string>
 
     <!-- Battery mode -->
     <string name="qs_hide_battery_title">Nascondi icona batteria</string>
-    <string name="qs_hide_battery_summary">Nascondi l\'icona batteria dall\'header QS</string>
+    <string name="qs_hide_battery_summary">Nascondi l\'icona batteria dall\'intestazione</string>
     <string name="battery_percentage_title">Percentuale batteria</string>
     <string name="battery_percentage_off">Disabilitata</string>
     <string name="battery_percentage_next">Abilitata</string>
@@ -420,15 +420,15 @@
 
     <!-- QS clock -->
     <string name="qs_clock_title">Ora</string>
-    <string name="qs_clock_summary">Mostra ora nell\'header QS</string>
+    <string name="qs_clock_summary">Mostra ora nel piè di pagina</string>
 
     <!-- Quick pull down-->
-    <string name="quick_pulldown_title">Slide rapido Quick Settings </string>
+    <string name="quick_pulldown_title">Cursore rapido impostazioni rapide</string>
     <string name="quick_pulldown_summary">%1$s</string>
     <string name="quick_pulldown_off">Off</string>
     <string name="quick_pulldown_left">Lato sinistro</string>
     <string name="quick_pulldown_right">Lato destro</string>
-    <string name="quick_pulldown_always">Ovunque</string>
+    <string name="quick_pulldown_always">Sempre</string>
 
     <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_enable">Visualizzatore musicale</string>
@@ -448,19 +448,19 @@
     <!-- Custom headers -->
     <string name="notification_title">Pannello notifiche</string>
     <string name="status_bar_custom_header_title">Abilita</string>
-    <string name="daylight_header_pack_title">Collezione immagini header</string>
-    <string name="status_bar_custom_header_shadow_title">Ombra immagini header</string>
+    <string name="daylight_header_pack_title">Collezione immagini dell\'intestazione</string>
+    <string name="status_bar_custom_header_shadow_title">Ombra immagini dell\'intestazione</string>
     <string name="status_bar_custom_header_shadow_summary">Per una migliore visibilità con immagini luminose</string>
     <string name="unit_percent">\u0025</string>
     <string name="static_header_provider" translatable="false">static</string>
     <string name="daylight_header_provider" translatable="false">daylight</string>
     <string name="static_header_provider_title">Immagine statica</string>
     <string name="daylight_header_provider_title">Collezione immagini</string>
-    <string name="custom_header_provider_title">Provider header</string>
-    <string name="custom_header_pick_title">Scegli immagini header</string>
+    <string name="custom_header_provider_title">Provider intestazione</string>
+    <string name="custom_header_pick_title">Scegli immagini dell\'intestazione</string>
     <string name="custom_header_pick_summary">Seleziona immagine locale o da fonte remota</string>
-    <string name="style_enabled_summary">L\'immagine header personalizzata è attivata</string>
-    <string name="style_disabled_summary">L\'immagine header personalizzata è disattivata</string>
+    <string name="style_enabled_summary">L\'immagine per l\'intestazione personalizzata è attivata</string>
+    <string name="style_disabled_summary">L\'immagine per l\'intestazione personalizzata è disattivata</string>
     <string name="header_provider_disabled">Disabilitato</string>
     <string name="custom_header_title">Immagine header personalizzata</string>
     <string name="file_header_select_title">Scegli immagine locale</string>
@@ -470,7 +470,7 @@
 
     <!-- Audio Panel view -->
     <string name="audio_panel_view">Pannello volume</string>
-    <string name="audio_panel_view_media_title">Media</string>
+    <string name="audio_panel_view_media_title">Multimediale</string>
     <string name="audio_panel_view_ringer_title">Suoneria</string>
     <string name="audio_panel_view_notification_title">Notifiche</string>
     <string name="audio_panel_view_alarm_title">Sveglia</string>
@@ -483,12 +483,12 @@
 
     <!-- Per App aspect Ratio -->
     <string name="action_save">Salva</string>
-    <string name="aspect_ratio_apps_enabled_title">Abilita scaling</string>
-    <string name="aspect_ratio_apps_enabled_summary">Abilita app legacy ad utilizzare interamente lo schermo</string>
+    <string name="aspect_ratio_apps_enabled_title">Abilita il ridimensionamento</string>
+    <string name="aspect_ratio_apps_enabled_summary">Consenti alle app legacy di utilizzare lo schermo intero</string>
     <string name="aspect_ratio_apps_list_summary"></string>
-    <string name="aspect_ratio_apps_list_title">App abilitate allo scaling</string>
-    <string name="aspect_ratio_category_title">Legacy app scaling</string>
-    <string name="aspect_ratio_apps_info">Le applicazioni devono essere riavviate dopo la modifica dello scaling</string>
+    <string name="aspect_ratio_apps_list_title">App abilitate al ridimensionamento</string>
+    <string name="aspect_ratio_category_title">App legacy ridimensionamento</string>
+    <string name="aspect_ratio_apps_info">Le applicazioni devono essere riavviate dopo la modifica del ridimensionamento</string>
 
     <!-- ambient visualizer -->
     <string name="ambient_visualizer_title">Mostra il visualizzatore musicale sull\'ambient display</string>
@@ -511,19 +511,19 @@
     <string name="system_animation_title">Sistema</string>
     <string name="activity_open_title">Animazione apertura attività</string>
     <string name="activity_close_title">Animazione chiusura attività</string>
-    <string name="task_open_title">Task open animation</string>
-    <string name="task_open_behind_title">Task open behind animation</string>
-    <string name="task_close_title">Task close animation</string>
-    <string name="task_move_to_front_title">Move to front animation</string>
-    <string name="task_move_to_back_title">Move to back animation</string>
+    <string name="task_open_title">Animazione apertura task</string>
+    <string name="task_open_behind_title">Animazione apertura dietro il task</string>
+    <string name="task_close_title">Animazione chiusura task</string>
+    <string name="task_move_to_front_title">Passa all\'animazione frontale</string>
+    <string name="task_move_to_back_title">Passa all\'animazione posteriore</string>
     <string name="wallpaper_open_title">Animazione apertura sfondo</string>
     <string name="wallpaper_close_title">Animazione chiusura sfondo</string>
-    <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
-    <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
+    <string name="wallpaper_intra_open_title">Animazione intra aperta dello sfondo</string>
+    <string name="wallpaper_intra_close_title">Animazione ravvicinata dello sfondo</string>
     <string name="animation_duration_title">Durata animazione</string>
     <string name="title_animation_no_override">Previeni sovrascrittura app</string>
     <string name="summary_animation_no_override">Previeni app sovrascrivere animazioni</string>
-    <string name="animation_duration_default">Default</string>
+    <string name="animation_duration_default">Predefinito</string>
 
     <!-- Force disable transition animation -->
     <string name="disable_transition_animations_title">Disabilità transizioni animazioni</string>
@@ -561,19 +561,19 @@
     <string name="flash_on_call_delay_title">Frequenza impulso flash</string>
 
     <!-- Lock Date Fonts -->
-    <string name="lock_date_font_title">Opzioni font data</string>
-    <string name="lock_date_font_summary">Cambia il font predefinito del widget della data sulla schermata di blocco</string>
-    <string name="lock_date_font_dialog_title">Scegli il font della data</string>
+    <string name="lock_date_font_title">Opzioni carattere data</string>
+    <string name="lock_date_font_summary">Cambia il carattere predefinito del widget della data sulla schermata di blocco</string>
+    <string name="lock_date_font_dialog_title">Scegli il carattere della data</string>
 
     <!-- Lock Clock & Date Size -->
-    <string name="lockdate_font_size_title">Dimensione font data</string>
-    <string name="lockclock_font_size_title">Dimensione font orologio</string>
+    <string name="lockdate_font_size_title">Dimensione carattere data</string>
+    <string name="lockclock_font_size_title">Dimensione carattere orologio</string>
 
     <!-- LS OwnerInfo Font & Size -->
-    <string name="lock_ownerinfo_font_title">Opzioni font info proprietario</string>
-    <string name="lock_ownerinfo_font_summary">Cambia il font predefinito del widget delle info proprietario sulla schermata di blocco</string>
-    <string name="lock_ownerinfo_font_dialog_title">Scegli font widget info proprietario</string>
-    <string name="lockowner_font_size_title">Dimensione font info proprietario</string>
+    <string name="lock_ownerinfo_font_title">Opzioni carattere info proprietario</string>
+    <string name="lock_ownerinfo_font_summary">Cambia il carattere predefinito del widget delle info proprietario sulla schermata di blocco</string>
+    <string name="lock_ownerinfo_font_dialog_title">Scegli carattere widget info proprietario</string>
+    <string name="lockowner_font_size_title">Dimensione carattere info proprietario</string>
 
     <!-- Custom carrier label and position -->
     <string name="etc_category_title">ETC</string>
@@ -591,11 +591,11 @@
     <string name="show_carrier_enabled">Schermata di blocco &amp; barra di stato</string>
     <string name="status_bar_carrier_color">Colore etichetta operatore</string>
     <string name="status_bar_carrier_size">Dimensione etichetta operatore</string>
-    <string name="status_bar_carrier_font_style_title">Font etichetta operatore</string>
+    <string name="status_bar_carrier_font_style_title">Carattere etichetta operatore</string>
 
     <!-- QuickSettings Panel Transparency -->
-    <string name="qs_panel_alpha_title">Opacità quick settings</string>
-    <string name="qs_panel_alpha_summary">Configura opacità dello sfondo dei quick settings</string>
+    <string name="qs_panel_alpha_title">Opacità impostazioni rapide</string>
+    <string name="qs_panel_alpha_summary">Configura l\'opacità dello sfondo delle impostazioni rapide</string>
 
     <!-- Doze Brightness Config -->
     <string name="doze_brightness_category">Configurazione luminosità doze</string>
@@ -725,21 +725,21 @@
     <string name="lockscreen_clock_dialog_title">Scegli stile orologio</string>
 
     <!-- QS themes -->
-    <string name="qs_themes_category_title">Temi QS</string>
-    <string name="qs_panel_color_title">Colore pannello QS</string>
+    <string name="qs_themes_category_title">Temi impostazioni rapide</string>
+    <string name="qs_panel_color_title">Colore pannello impostazioni rapide</string>
     <string name="qs_bg_wall_title">Usa colore sfondo</string>
-    <string name="qs_bg_wall_summary">Set QS background color from Wallpaper</string>
+    <string name="qs_bg_wall_summary">Imposta il colore di sfondo delle impostazioni rapide</string>
     <string name="qs_bg_use_fw">Usa il colore predefinito</string>
-    <string name="qs_bg_use_fw_summary">Disabilita stili QS personalizzati quando si usano gestori temi di terze parti</string>
-    <string name="qs_bg_accent_title">Usa colore accent</string>
-    <string name="qs_bg_accent_summary">Imposta il colore di sfondo dei QS in base al colore accent</string>
+    <string name="qs_bg_use_fw_summary">Disabilita lo stile impostazioni rapide personalizzati quando si usano gestori temi di terze parti</string>
+    <string name="qs_bg_accent_title">Usa colore primario</string>
+    <string name="qs_bg_accent_summary">Imposta il colore di sfondo delle impostazioni rapide in base al colore primario</string>
 
     <!-- Themes -->
     <string name="theme_select_title">Temi</string>
     <string name="theme_select_summary">Sfoglia e scegli i temi installati</string>
 
     <!--Gestures-->
-    <string name="aosp_gesture_title">Gesture AOSP</string>
+    <string name="aosp_gesture_title">Gesti AOSP</string>
 
     <!-- Units -->
     <string name="unit_seconds">secondi</string>
@@ -749,7 +749,7 @@
     <!-- Statusbar ticker -->
     <string name="statusbar_notifi_cat">Ticker notifiche (beta)</string>
     <string name="status_bar_show_ticker_title">Ticker</string>
-    <string name="status_bar_show_ticker_summary">Anteprima notifica nella status bar</string>
+    <string name="status_bar_show_ticker_summary">Anteprima notifica nella barra di stato</string>
     <string name="ticker_animation_mode_title">Animazione Ticker</string>
     <string name="ticker_animation_mode_alpha_fade">Dissolvenza</string>
     <string name="ticker_animation_mode_scroll">Scorrimento</string>
@@ -760,12 +760,12 @@
     <string name="qs_running_services_summary">Abilita icona servizi in background nel footer dei QS</string>
 
     <!-- Edge lighting (aka pulse ambient light) -->
-    <string name="pulse_ambient_light_summary">Mostra edge lighting al ricevimento di nuove notifiche</string>
+    <string name="pulse_ambient_light_summary">Mostra l\'illuminazione del bordo su nuove notifiche</string>
     <string name="ambient_notification_light_enabled_title">Mostra in AoD</string>
     <string name="ambient_notification_light_enabled_sumary">Continua a mostrare in AoD finché lo schermo non viene acceso</string>
     <string name="ambient_notification_light_hide_aod_title">Nascondi contenuto AoD</string>
     <string name="ambient_notification_light_hide_aod_sumary">Nascondi altri contenuti AoD quando le barre vengono visualizzate </string>
-    <string name="pulse_ambient_light_color_title">Colore Edge light</string>
+    <string name="pulse_ambient_light_color_title">Colore illuminazione bordo</string>
     <string name="pulse_ambient_light_duration_title">Durata</string>
     <string name="pulse_ambient_light_duration_summary">Imposta durata animazione Ambient light</string>
     <string name="pulse_ambient_light_repeat_count_title">Numero ripetizioni</string>

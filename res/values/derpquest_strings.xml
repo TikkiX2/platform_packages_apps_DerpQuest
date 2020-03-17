@@ -854,6 +854,13 @@
     <string name="lockscreen_clock_sammy_accent_min">Sammy (accent minute)</string>
     <string name="lockscreen_clock_text">Text (Android 9)</string>
     <string name="lockscreen_clock_text_alt">Text (Android 10)</string>
+    <string name="lockscreen_clock_selection_shishu_dreams" translatable="false">Shishu Dreams</string>
+    <string name="lockscreen_clock_selection_shishu_immensity" translatable="false">Shishu Immensity</string>
+    <string name="lockscreen_clock_selection_shishu_nerves">Shishu Nerves</string>
+    <string name="lockscreen_clock_selection_gradient_btlglogo">Gradient clock (with bootleg logo)</string>
+    <string name="lockscreen_clock_selection_gradient_shishu">Gradient clock (with shishu logo)</string>
+    <string name="lockscreen_clock_selection_gradient_full">Full gradient clock</string>
+    <string name="lockscreen_clock_selection_gradient_likeqs">Monochrome gradient clock</string>
 
     <!-- Lockscreen Date styles -->
     <string name="lockscreen_date_selection_title">Date style</string>

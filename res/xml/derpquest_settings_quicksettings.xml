@@ -29,13 +29,6 @@
             android:entryValues="@array/quick_pulldown_values"
             android:defaultValue="0" />
 
-        <com.derpquest.settings.preferences.SecureSettingSwitchPreference
-            android:key="qs_brightness_position_bottom"
-            android:title="@string/qs_brightness_position_bottom_title"
-            android:summary="@string/qs_brightness_position_bottom_summary"
-            android:defaultValue="false"
-            android:dependency="qs_show_brightness" />
-
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -387,8 +387,6 @@
     <string name="qs_show_auto_brightness_summary">Show an auto brightness control button near the slider</string>
     <string name="qs_show_minmax_brightness_title">Min-Max icons</string>
     <string name="qs_show_minmax_brightness_summary">Show + - brightness control buttons near the slider</string>
-    <string name="qs_show_brightness_footer_title">Brightness slider in Footer</string>
-    <string name="qs_show_brightness_footer_summary">Show a brightness slider in the quick settings footer</string>
 
     <!-- QS security footer -->
     <string name="qs_show_secure_title">Security footer</string>

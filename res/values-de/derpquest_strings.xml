@@ -58,6 +58,10 @@
     <!-- Navbar options -->
     <string name="enable_navbar_title">Aktivieren</string>
     <string name="enable_navbar_summary">Steuert, ob die Navigationsleiste angezeigt wird</string>
+    <string name="navbar_tuner_title">Navigationsleisten-Tuner</string>
+    <string name="navbar_tuner_summary">Schaltflächen der Navigationsleiste neu anordnen und ändern</string>
+    <string name="enable_navbar_title">Aktivieren</string>
+    <string name="enable_navbar_summary">Steuert, ob die Navigationsleiste angezeigt wird</string>
 
     <!-- Lockscreen icons -->
     <string name="lockscreen_tuner_title">Sperrbildschirm-Verknüpfungen</string>

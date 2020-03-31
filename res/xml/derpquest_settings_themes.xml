@@ -42,6 +42,13 @@
             android:defaultValue="0x4285F4"
             android:persistent="false" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="gradient_color"
+            android:title="@string/gradient_color"
+            android:defaultValue="0xffffff"
+            android:summary="@string/gradient_color_summary"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

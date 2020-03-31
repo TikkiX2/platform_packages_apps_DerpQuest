@@ -64,6 +64,8 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private static final String ACCENT_PRESET = "accent_preset";
     private static final String ACCENT_COLOR = "accent_color";
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
+    private static final String GRADIENT_COLOR = "gradient_color";
+    private static final String GRADIENT_COLOR_PROP = "persist.sys.theme.gradientcolor";
     private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
     private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
     private static final String SYSUI_STATUS_BAR_PADDING = "sysui_status_bar_padding";
@@ -73,6 +75,7 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private IOverlayManager mOverlayService;
     private ListPreference mAccentPreset;
     private ColorPickerPreference mThemeColor;
+    private ColorPickerPreference mGradientColor;
     private CustomSeekBarPreference mCornerRadius;
     private CustomSeekBarPreference mContentPadding;
     private CustomSeekBarPreference mSBPadding;
@@ -112,9 +115,7 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
         }
         mThemeColor.setOnPreferenceChangeListener(this);
 
-        mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
-        mAccentPreset.setOnPreferenceChangeListener(this);
-        checkColorPreset(colorVal);
+        setupGradientPref();
 
         // Rounded Corner Radius
         mCornerRadius = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_SIZE);
@@ -176,6 +177,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
                  mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
             } catch (RemoteException ignored) {
             }
+        } else if (preference == mGradientColor) {
+            int color = (Integer) newValue;
+            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
+            SystemProperties.set(GRADIENT_COLOR_PROP, hexColor);
+            try {
+                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+             } catch (RemoteException ignored) {
+             }
         } else if (preference == mAccentPreset) {
             String value = (String) newValue;
             int index = mAccentPreset.findIndexOfValue(value);
@@ -232,6 +243,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
         mCornerRadius.setValue((int) (resourceIdRadius / density));
         mContentPadding.setValue((int) (res.getDimension(resourceIdPadding) / density));
         mSBPadding.setValue((int) (res.getDimension(resourceIdSBPadding) / density));
+    }
+
+    private void setupGradientPref() {
+        mGradientColor = (ColorPickerPreference) findPreference(GRADIENT_COLOR);
+        String colorVal = SystemProperties.get(GRADIENT_COLOR_PROP, "-1");
+        int color = "-1".equals(colorVal)
+                ? Color.WHITE
+                : Color.parseColor("#" + colorVal);
+        mGradientColor.setNewPreviewColor(color);
+        mGradientColor.setOnPreferenceChangeListener(this);
     }
 
     @Override

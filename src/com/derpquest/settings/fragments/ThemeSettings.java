@@ -115,17 +115,7 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
         }
         mThemeColor.setOnPreferenceChangeListener(this);
 
-        mGradientColor = (ColorPickerPreference) findPreference(GRADIENT_COLOR);
-        String colorVal = SystemProperties.get(GRADIENT_COLOR_PROP, "-1");
-        int color = "-1".equals(colorVal)
-                ? Color.WHITE
-                : Color.parseColor("#" + colorVal);
-        mGradientColor.setNewPreviewColor(color);
-        mGradientColor.setOnPreferenceChangeListener(this);
-
-        mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
-        mAccentPreset.setOnPreferenceChangeListener(this);
-        checkColorPreset(colorVal);
+        setupGradientPref();
 
         // Rounded Corner Radius
         mCornerRadius = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_SIZE);
@@ -253,6 +243,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
         mCornerRadius.setValue((int) (resourceIdRadius / density));
         mContentPadding.setValue((int) (res.getDimension(resourceIdPadding) / density));
         mSBPadding.setValue((int) (res.getDimension(resourceIdSBPadding) / density));
+    }
+
+    private void setupGradientPref() {
+        mGradientColor = (ColorPickerPreference) findPreference(GRADIENT_COLOR);
+        String colorVal = SystemProperties.get(GRADIENT_COLOR_PROP, "-1");
+        int color = "-1".equals(colorVal)
+                ? Color.WHITE
+                : Color.parseColor("#" + colorVal);
+        mGradientColor.setNewPreviewColor(color);
+        mGradientColor.setOnPreferenceChangeListener(this);
     }
 
     @Override

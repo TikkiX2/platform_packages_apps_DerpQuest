@@ -67,9 +67,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String LOCKSCREEN_INFO = "lockscreen_info";
     private static final String MEDIA_ART = "lockscreen_media_metadata";
     private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
+    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
 
     private CustomSeekBarPreference mPulseBrightness;
     private CustomSeekBarPreference mDozeBrightness;
+    private CustomSeekBarPreference mMaxKeyguardNotifConfig;
 
     private SystemSettingMasterSwitchPreference mBatteryInfo;
     private SystemSettingMasterSwitchPreference mBatteryBar;
@@ -153,6 +155,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         mPulseBrightness.setValue(value);
         mPulseBrightness.setOnPreferenceChangeListener(this);
 
+        mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
+        int kgconf = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 3);
+        mMaxKeyguardNotifConfig.setValue(kgconf);
+        mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
+
         mDozeBrightness = (CustomSeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
         value = Settings.System.getInt(getContentResolver(),
                 Settings.System.DOZE_BRIGHTNESS, defaultDoze);
@@ -214,6 +222,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             int value = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DOZE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mMaxKeyguardNotifConfig) {
+            int kgconf = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
             return true;
         }
         return false;

@@ -65,6 +65,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String QS_BG_STYLE = "qs_panel_bg_override";
     private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
     private static final String QS_CUSTOM_HEADER = "status_bar_custom_header";
+    private static final String STATUS_BAR_CUSTOM_HEADER_IMAGE = "status_bar_custom_header_image";
 
     private SystemSettingSeekBarPreference mQsPanelAlpha;
 
@@ -147,6 +148,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
+            // Making sure that, If enabled, A header is also selected
+            if (value && Settings.System.getString(resolver,
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_IMAGE) == null) {
+                Settings.System.putString(resolver,
+                        STATUS_BAR_CUSTOM_HEADER_IMAGE, "org.omnirom.omnistyle/derp_header_04");
+            }
             return true;
         }
         return false;

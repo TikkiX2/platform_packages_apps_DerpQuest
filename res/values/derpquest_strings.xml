@@ -1037,4 +1037,9 @@
     <string name="power_menu_transparency">Power/reboot menu opacity</string>
     <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
 
+    <!-- Lockscreen notif count -->
+    <string name="lockscreen_maxnotif_title">Lockscreen notification count</string>
+    <string name="lockscreen_maxnotif_sumary">Enable adjustment of max lockscreen notifications</string>
+    <string name="lockscreen_maxnotif_config">Max lockscreen notifications</string>
+
 </resources>

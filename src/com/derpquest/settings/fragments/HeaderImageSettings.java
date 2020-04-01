@@ -64,6 +64,7 @@ public class HeaderImageSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String FILE_HEADER_SELECT = "file_header_select";
+    private static final String STATUS_BAR_CUSTOM_HEADER_IMAGE = "status_bar_custom_header_image";
 
     private static final int REQUEST_PICK_IMAGE = 0;
 
@@ -132,6 +133,13 @@ public class HeaderImageSettings extends SettingsPreferenceFragment implements
         mFileHeader.setEnabled(headerEnabled);
         mFileHeader.setSummary(headerEnabled ?
                 R.string.file_header_select_summary : R.string.enable_first);
+
+        // Making sure that, If enabled, A header is also selected
+        if (headerEnabled && Settings.System.getString(resolver,
+                Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_IMAGE) == "") {
+            Settings.System.putString(resolver,
+                    STATUS_BAR_CUSTOM_HEADER_IMAGE, "org.omnirom.omnistyle/derp_header_04");
+        }
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {

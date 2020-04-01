@@ -48,7 +48,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class LockColors extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener , Indexable {
+public class LockScreenColors extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener , Indexable {
 
     private static final String TAG = "LockscreenColors";
 

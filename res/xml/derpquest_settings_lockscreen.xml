@@ -192,6 +192,13 @@
             android:summary="@string/lockscreen_ownerinfo_summary"
             android:fragment="com.derpquest.settings.fragments.LockScreenOwnerInfoSettings" />
 
+        <!-- LockScreen Colors -->
+        <Preference
+            android:key="lockscreen_colors"
+            android:title="@string/lockscreen_colors"
+            android:summary="@string/lockscreen_colors_summary"
+            android:fragment="com.derpquest.settings.fragments.LockScreenColors" />
+
     <com.derpquest.settings.preferences.SystemSettingSwitchPreference
          android:key="lock_screen_custom_notif"
          android:title="@string/lockscreen_maxnotif_title"

@@ -823,6 +823,14 @@
     <string name="about_devices_git_summary">在GitHub上查看我们的设备源</string>
     <string name="about_phone_title">关于手机</string>
     <string name="about_phone_summary">打开系统关于界面</string>
+    <!-- About - Device specific links -->
+    <string name="about_device_category">Device Specific Links</string>
+    <string name="about_device_fw">Required firmware</string>
+    <!-- Firmware version -->
+    <!-- Firmware link -->
+    <string name="about_device_recovery">Recommended Recovery</string>
+    <!-- Recovery version -->
+    <!-- Recovery link -->
     <!-- Accent presets -->
     <string name="accent_preset_0">AOSP 淡黄色</string>
     <string name="accent_preset_1">AOSP 绿色</string>
@@ -888,4 +896,30 @@
     <string name="lockscreen_weather_style_title">Weather style</string>
     <string name="lockscreen_weather_omni_style_title">Omni style</string>
     <string name="lockscreen_weather_pixel_style_title">Pixel style</string>
+    <!-- Power menu and dialogs opacity -->
+    <string name="panel_porn_title">Power Menu Transparency</string>
+    <string name="power_menu_transparency">Power/reboot menu opacity</string>
+    <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
+    <!-- Lockscreen notif count -->
+    <string name="lockscreen_maxnotif_title">Lockscreen notification count</string>
+    <string name="lockscreen_maxnotif_sumary">Enable adjustment of max lockscreen notifications</string>
+    <string name="lockscreen_maxnotif_config">Max lockscreen notifications</string>
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Lockscreen Colors</string>
+    <string name="lockscreen_clock_color">Lockscreen Clock</string>
+    <string name="lockscreen_colors_summary">Change color of lockscreen widgets</string>
+    <string name="lockscreen_clock_date_color">Lockscreen Date</string>
+    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
+    <string name="lockscreen_colors_title">Lockscreen colors</string>
+    <string name="lockscreen_owner_info_color">Owner info</string>
+    <string name="lockscreen_phone_icon_color">Lockscreen Bottom Left shortcut</string>
+    <string name="lockscreen_lock_icon_color">Lockscreen Lock icon</string>
+    <string name="lockscreen_camera_icon_color">Lockscreen Bottom Right shortcut</string>
+    <string name="ls_shortcut_icon_color">Lockscreen Shortcuts</string>
+    <string name="lockscreen_indication_text_color">Lockscreen Indication text</string>
+    <string name="lockscreen_weather_temp_color">Weather Temp Color</string>
+    <string name="lockscreen_weather_city_color">Weather City Color</string>
+    <string name="lockscreen_weather_icon_color">Weather Icon Color</string>
+    <string name="yes">YES</string>
 </resources>

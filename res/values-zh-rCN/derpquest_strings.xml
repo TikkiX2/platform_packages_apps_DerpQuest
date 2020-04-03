@@ -922,4 +922,8 @@
     <string name="lockscreen_weather_city_color">Weather City Color</string>
     <string name="lockscreen_weather_icon_color">Weather Icon Color</string>
     <string name="yes">YES</string>
+    <!-- QS footer text no expanded -->
+    <string name="tikkiui_footer_text_show_title">Show QS footer text (in QS Panel no expanded)</string>
+    <string name="tikkiui_footer_text_string_title">Customize text</string>
+    <string name="tikkiui_footer_text_string_summary">Set to empty for default #DerpFest TikkiBuild</string>
 </resources>

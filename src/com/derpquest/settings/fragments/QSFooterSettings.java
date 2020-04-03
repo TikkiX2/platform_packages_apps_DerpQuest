@@ -56,10 +56,12 @@ public class QSFooterSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String DERP_FOOTER_TEXT_STRING = "derp_footer_text_string";
+    private static final String TIKKIUI_FOOTER_TEXT_STRING = "tikkiui_footer_text_string";
     private static final String KEY_ALWAYS_SETTINGS = "qs_always_show_settings";
     private static final String KEY_DRAG_HANDLE = "qs_drag_handle";
 
     private SystemSettingEditTextPreference mFooterString;
+    private SystemSettingEditTextPreference mTikkiUIFooterString;
     private SystemSettingSwitchPreference mAlwaysSettings;
     private SystemSettingSwitchPreference mDragHandle;
 
@@ -83,6 +85,18 @@ public class QSFooterSettings extends SettingsPreferenceFragment implements
                     Settings.System.DERP_FOOTER_TEXT_STRING, "#DerpFest");
         }
 
+        mTikkiUIFooterString = (SystemSettingEditTextPreference) findPreference(TIKKIUI_FOOTER_TEXT_STRING);
+        mTikkiUIFooterString.setOnPreferenceChangeListener(this);
+        String tikkiuiFooterString = Settings.System.getString(resolver,
+                TIKKIUI_FOOTER_TEXT_STRING);
+        if (tikkiuiFooterString != null && tikkiuiFooterString != "")
+            mTikkiUIFooterString.setText(tikkiuiFooterString);
+        else {
+            mTikkiUIFooterString.setText("#DerpFest TikkiBuild");
+            Settings.System.putString(resolver,
+                    Settings.System.TIKKIUI_FOOTER_TEXT_STRING, "#DerpFest TikkiBuild");
+        }
+
         mAlwaysSettings = (SystemSettingSwitchPreference) findPreference(KEY_ALWAYS_SETTINGS);
         mAlwaysSettings.setOnPreferenceChangeListener(this);
 
@@ -102,6 +116,17 @@ public class QSFooterSettings extends SettingsPreferenceFragment implements
                 mFooterString.setText("#DerpFest");
                 Settings.System.putString(resolver,
                         Settings.System.DERP_FOOTER_TEXT_STRING, "#DerpFest");
+            }
+            return true;
+        } else if (preference == mTikkiUIFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(resolver,
+                        Settings.System.TIKKIUI_FOOTER_TEXT_STRING, value);
+            else {
+                mTikkiUIFooterString.setText("#DerpFest TikkiBuild");
+                Settings.System.putString(resolver,
+                        Settings.System.TIKKIUI_FOOTER_TEXT_STRING, "#DerpFest TikkiBuild");
             }
             return true;
         } else if (preference == mAlwaysSettings) {

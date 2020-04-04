@@ -148,6 +148,43 @@
             android:dependency="lockscreen_clock"
             android:defaultValue="true" />
 
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_enabled"
+            android:title="@string/lockscreen_weather_title"
+            android:summary="@string/lockscreen_weather_summary"
+            android:defaultValue="true" />
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_show_city"
+            android:title="@string/lockscreen_weather_show_city_title"
+            android:summary="@string/lockscreen_weather_show_city_summary"
+            android:dependency="lockscreen_weather_enabled"
+            android:defaultValue="false" />
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_show_temp"
+            android:title="@string/lockscreen_weather_show_temp_title"
+            android:summary="@string/lockscreen_weather_show_temp_summary"
+            android:dependency="lockscreen_weather_enabled"
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="omnijaws_settings"
+            android:title="@string/weather_title"
+            android:summary="@string/weather_summary"
+            android:dependency="lockscreen_weather_enabled"
+            android:fragment="com.derpquest.settings.external.OmniJawsSettings" />
+
+        <com.derpquest.settings.preferences.SystemSettingListPreference
+            android:key="lockscreen_weather_style"
+            android:title="@string/lockscreen_weather_style_title"
+            android:dialogTitle="@string/lockscreen_weather_style_title"
+            android:entries="@array/lockscreen_weather_style_entries"
+            android:entryValues="@array/lockscreen_weather_style_values"
+            android:defaultValue="1"
+            android:dependency="lockscreen_weather_enabled"
+            android:summary="%s" />
+
         <!-- Owner Info -->
         <Preference
             android:key="lockscreen_ownerinfo"

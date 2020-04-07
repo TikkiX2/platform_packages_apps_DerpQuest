@@ -115,6 +115,10 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
         }
         mThemeColor.setOnPreferenceChangeListener(this);
 
+        mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
+        mAccentPreset.setOnPreferenceChangeListener(this);
+        checkColorPreset(colorVal);
+
         setupGradientPref();
 
         // Rounded Corner Radius

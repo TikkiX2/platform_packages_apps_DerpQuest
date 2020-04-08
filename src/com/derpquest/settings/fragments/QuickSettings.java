@@ -59,12 +59,13 @@ import java.util.Map;
 public class QuickSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
-    private static final String TAG = "StyleSettings";
+    private static final String TAG = "QuickSettings";
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QS_BLUR = "qs_blur";
     private static final String QS_BG_STYLE = "qs_panel_bg_override";
     private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
     private static final String QS_CUSTOM_HEADER = "status_bar_custom_header";
+    private static final String STATUS_BAR_CUSTOM_HEADER_IMAGE = "status_bar_custom_header_image";
 
     private SystemSettingSeekBarPreference mQsPanelAlpha;
 
@@ -105,7 +106,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mBrightnessSlider = (SystemSettingMasterSwitchPreference)
                 findPreference(BRIGHTNESS_SLIDER);
         mBrightnessSlider.setOnPreferenceChangeListener(this);
-        enabled = Settings.Secure.getInt(resolver,
+        enabled = Settings.System.getInt(resolver,
                 BRIGHTNESS_SLIDER, 1) == 1;
         mBrightnessSlider.setChecked(enabled);
 
@@ -140,13 +141,19 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mBrightnessSlider) {
             Boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(resolver,
+            Settings.System.putInt(resolver,
                     BRIGHTNESS_SLIDER, value ? 1 : 0);
             return true;
         } else if (preference == mCustomHeader) {
             Boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
+            // Making sure that, If enabled, A header is also selected
+            if (value && Settings.System.getString(resolver,
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_IMAGE) == null) {
+                Settings.System.putString(resolver,
+                        STATUS_BAR_CUSTOM_HEADER_IMAGE, "org.omnirom.omnistyle/derp_header_04");
+            }
             return true;
         }
         return false;

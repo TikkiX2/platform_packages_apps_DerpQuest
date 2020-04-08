@@ -753,6 +753,8 @@
     <string name="lockscreen_clock_selection_gradient_shishu">Gradient clock (with shishu logo)</string>
     <string name="lockscreen_clock_selection_gradient_full">Full gradient clock</string>
     <string name="lockscreen_clock_selection_gradient_likeqs">Monochrome gradient clock</string>
+    <string name="lockscreen_clock_selection_tikkiui_zerotwo">ZeroTwo (by.tikkiX2)</string>
+    <string name="lockscreen_clock_selection_tikkiui_diamond">Diamond (by.tikkiX2)</string>
     <!-- Lockscreen Date styles -->
     <string name="lockscreen_date_selection_title">Date style</string>
     <string name="lockscreen_date_dialog_title">Select date style</string>
@@ -765,6 +767,9 @@
     <string name="lockscreen_date_selection_str_gradient">Gradient</string>
     <string name="lockscreen_date_selection_str_border_accent">Dark with accented borders</string>
     <string name="lockscreen_date_selection_str_border_gradient">Dark with gradient borders</string>
+    <string name="lockscreen_date_selection_box_str_gradient">Gradient Box</string>
+    <string name="lockscreen_date_selection_box_str_border_accent">Dark Box with accented borders</string>
+    <string name="lockscreen_date_selection_box_str_border_gradient">Dark Box with gradient borders</string>
     <!-- FOD icon picker -->
     <string name="fod_icon_picker_category_title">FOD customization options</string>
     <string name="fod_icon_picker_title">Icon customizer</string>

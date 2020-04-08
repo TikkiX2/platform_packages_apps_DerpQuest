@@ -609,6 +609,9 @@
         <item>@string/lockscreen_date_selection_str_gradient</item>
         <item>@string/lockscreen_date_selection_str_border_accent</item>
         <item>@string/lockscreen_date_selection_str_border_gradient</item>
+        <item>@string/lockscreen_date_selection_box_str_gradient</item>
+        <item>@string/lockscreen_date_selection_box_str_border_accent</item>
+        <item>@string/lockscreen_date_selection_box_str_border_gradient</item>
     </string-array>
 
     <string-array name="lockscreen_date_selection_values" translatable="false">
@@ -621,6 +624,9 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
     </string-array>
 
     <!-- FOD pressed state options -->

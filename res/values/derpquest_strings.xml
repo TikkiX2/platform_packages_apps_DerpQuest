@@ -861,6 +861,8 @@
     <string name="lockscreen_clock_selection_gradient_shishu">Gradient clock (with shishu logo)</string>
     <string name="lockscreen_clock_selection_gradient_full">Full gradient clock</string>
     <string name="lockscreen_clock_selection_gradient_likeqs">Monochrome gradient clock</string>
+    <string name="lockscreen_clock_selection_tikkiui_zerotwo">ZeroTwo (by.tikkiX2)</string>
+    <string name="lockscreen_clock_selection_tikkiui_diamond">Diamond (by.tikkiX2)</string>
 
     <!-- Lockscreen Date styles -->
     <string name="lockscreen_date_selection_title">Date style</string>

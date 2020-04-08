@@ -570,6 +570,8 @@
         <item>@string/lockscreen_clock_selection_gradient_shishu</item>
         <item>@string/lockscreen_clock_selection_gradient_full</item>
         <item>@string/lockscreen_clock_selection_gradient_likeqs</item>
+        <item>@string/lockscreen_clock_selection_tikkiui_zerotwo</item>
+        <item>@string/lockscreen_clock_selection_tikkiui_diamond</item>
     </string-array>
 
     <string-array name="lockscreen_clock_values">
@@ -592,6 +594,8 @@
         <item>16</item>
         <item>17</item>
         <item>18</item>
+        <item>19</item>
+        <item>20</item>
     </string-array>
 
      <!-- Lockscreen date styles -->

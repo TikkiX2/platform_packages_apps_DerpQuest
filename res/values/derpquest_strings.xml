@@ -1072,4 +1072,8 @@
     <string name="tikkiui_footer_text_string_title">Customize text</string>
     <string name="tikkiui_footer_text_string_summary">Set to empty for default #DerpFest TikkiBuild</string>
 
+    <!-- Cool Dividers WITH GRADIENT -->
+    <string name="tikkiui_lock_cool_divider_show_title">Show Cool Dividers</string>
+    <string name="tikkiui_lock_cool_divider_show_summary">Show two cool dividers on the lockscreen (with gradient)</string>
+
 </resources>

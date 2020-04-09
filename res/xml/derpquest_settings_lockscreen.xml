@@ -103,6 +103,13 @@
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
         </Preference>
 
+        <!-- Cool dividers -->
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="tikkiui_lock_cool_divider_show"
+            android:title="@string/tikkiui_lock_cool_divider_show_title"
+            android:summary="@string/tikkiui_lock_cool_divider_show_summary"
+            android:defaultValue="true" />
+
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_show_status_bar"
             android:title="@string/lockscreen_show_status_bar_title"

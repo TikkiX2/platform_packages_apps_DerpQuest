@@ -54,8 +54,14 @@
 
     <!-- QS footer text gradient toggle -->
     <com.derpquest.settings.preferences.SystemSettingSwitchPreference
-        android:key="tikkiui_footer_text_show"
+        android:key="tikkiui_footer_text_musicalize"
         android:title="@string/tikkiui_footer_text_show_title"
+        android:defaultValue="true" />
+
+    <!-- Musicalize QS footer text gradient toggle -->
+    <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+        android:key="tikkiui_footer_text_show"
+        android:title="@string/tikkiui_footer_text_musicalize_show_title"
         android:defaultValue="true" />
 
     <!-- QS footer text string -->

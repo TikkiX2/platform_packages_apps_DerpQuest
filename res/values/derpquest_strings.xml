@@ -1076,4 +1076,8 @@
     <string name="tikkiui_lock_cool_divider_show_title">Show Cool Dividers</string>
     <string name="tikkiui_lock_cool_divider_show_summary">Show two cool dividers on the lockscreen (with gradient)</string>
 
+    <!-- Volume panel Hide Things-->
+    <string name="tikkiui_hide_things_volumepanel_title">Hide Things below volume panel</string>
+    <string name="tikkiui_hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
+
 </resources>

@@ -18,6 +18,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
      <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+        android:key="tikkiui_hide_things_volumepanel"
+        android:summary="@string/tikkiui_hide_things_volumepanel_summary"
+        android:title="@string/tikkiui_hide_things_volumepanel_title"
+        android:defaultValue="true" />
+
+     <com.derpquest.settings.preferences.SystemSettingSwitchPreference
         android:key="volume_button_music_control"
         android:summary="@string/volume_rocker_music_controls_summary"
         android:title="@string/volume_rocker_music_controls_title"
@@ -35,7 +41,7 @@
         android:fragment="com.derpquest.settings.fragments.VolumeSteps" />
 
     <Preference
-        android:key="audio_panel" 
+        android:key="audio_panel"
         android:fragment="com.derpquest.settings.fragments.AudioPanelSettings"
         android:title="@string/audio_panel_view" />
 

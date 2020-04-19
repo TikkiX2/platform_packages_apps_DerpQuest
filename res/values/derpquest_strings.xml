@@ -50,7 +50,6 @@
     <string name="general_category">General</string>
     <string name="look_category">Look</string>
     <string name="items_category">Items</string>
-    <string name="custom_string">Custom</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -203,7 +202,7 @@
     <string name="show_network_traffic_up">Upload</string>
     <string name="show_network_traffic_down">Download</string>
     <string name="show_network_traffic_all">Both</string>
-    <string name="nettraf_font_size">Single net font size</string>
+    <string name="nettraf_font_size">Single net font size (dp)</string>
 
     <!-- Statusbar double tap to sleep -->
     <string name="double_tap_to_sleep_title">Status bar double tap to sleep</string>
@@ -575,10 +574,6 @@
     <string name="notification_sound_vib_screen_on_title">Noisy notifications if screen on</string>
     <string name="notification_sound_vib_screen_on_summary">Disable to block notifications sound and vibration when the screen is awake</string>
 
-    <!-- Gentle notifications header -->
-    <string name="show_gentle_header_title">Show gentle notifications header</string>
-    <string name="show_gentle_header_summary">Wheter to show "silent notifications" title above such notifications (SystemUI restart required)</string>
-
     <!-- flash on call waiting -->
     <string name="flash_on_call_category">Pulse flash</string>
     <string name="flash_on_call_title">Pulse flash on incoming call</string>
@@ -587,6 +582,10 @@
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force expanded notifications</string>
     <string name="force_expanded_notifications_summary">Force apps that support expanded notifications</string>
+
+    <!-- R Notification headers -->
+    <string name="notification_headers_title">Show notification headers</string>
+    <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
 
     <!-- Statusbar Clock Font Style, Size & Color -->
     <string name="status_bar_clock_font_style_title">Clock font style</string>
@@ -891,10 +890,6 @@
     <string name="fod_recog_animation_pureview_future">Future</string>
     <string name="fod_recog_animation_pureview_molecular">Molecular</string>
 
-    <!-- RGB Picker -->
-    <string name="accent_color">Accent picker</string>
-    <string name="accent_summary">System wide accent picker</string>
-
     <!-- Text Clock -->
     <string name="text_clock_customizations">Text Clock</string>
     <string name="text_clock_alignment">Alignment</string>
@@ -952,45 +947,23 @@
     <string name="about_device_recovery_ver" translatable="false"></string> <!-- Recovery version -->
     <string name="about_device_recovery_link" translatable="false"></string> <!-- Recovery link -->
 
-    <!-- Accent presets -->
-    <string name="accent_preset_0">AOSP Cinnamon</string>
-    <string name="accent_preset_1">AOSP Green</string>
-    <string name="accent_preset_2">AOSP Ocean</string>
-    <string name="accent_preset_3">AOSP Orchid</string>
-    <string name="accent_preset_4">AOSP Purple</string>
-    <string name="accent_preset_5">AOSP Space</string>
-    <string name="accent_preset_6">AndroidOneGreen</string>
-    <string name="accent_preset_7">AospaGreen</string>
-    <string name="accent_preset_8">AtlantisGreen</string>
-    <string name="accent_preset_9">AzureRadiance</string>
-    <string name="accent_preset_10">black</string>
-    <string name="accent_preset_11">CocaColaRed</string>
-    <string name="accent_preset_12">DiscordPurple</string>
-    <string name="accent_preset_13">ElectricViolet</string>
-    <string name="accent_preset_14">FacebookBlue</string>
-    <string name="accent_preset_15">FiBlue</string>
-    <string name="accent_preset_16">InstagramCerise</string>
-    <string name="accent_preset_17">JollibeeCrimson</string>
-    <string name="accent_preset_18">MarsOrange</string>
-    <string name="accent_preset_19">MonsterEnergyGreen</string>
-    <string name="accent_preset_20">NextbitMint</string>
-    <string name="accent_preset_21">NovaYellow</string>
-    <string name="accent_preset_22">OneplusRed</string>
-    <string name="accent_preset_23">PepsiBlue</string>
-    <string name="accent_preset_24">PersianRed</string>
-    <string name="accent_preset_25">PocophoneYellow</string>
-    <string name="accent_preset_26">RazerGreen</string>
-    <string name="accent_preset_27">SamsungBlue</string>
-    <string name="accent_preset_28">SlateSpruce</string>
-    <string name="accent_preset_29">SpotifyGreen</string>
-    <string name="accent_preset_30">StarbucksGreen</string>
-    <string name="accent_preset_31">teal</string>
-    <string name="accent_preset_32">TorchPink</string>
-    <string name="accent_preset_33">TwitchPurple</string>
-    <string name="accent_preset_34">TwitterBlue</string>
-    <string name="accent_preset_35">white</string>
-    <string name="accent_preset_36">XboxGreen</string>
-    <string name="accent_preset_37">XiaomiOrange</string>
-    <string name="accent_preset_title">Accent preset</string>
+    <!-- Heads up -->
+    <string name="heads_up_settings_title">Heads up</string>
+    <string name="heads_up_settings_summary">Configure heads up timeout, snooze timer and more</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for given time</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Timeout</string>
+    <string name="heads_up_time_out_summary">The time peeking notifications will show for</string>
+
+    <!-- Heads up blacklists -->
+    <string name="add_heads_up_package">Manage apps</string>
+    <string name="heads_up_stoplist_title">Stoplist</string>
+    <string name="add_heads_up_stoplist_summary">Disable heads up in these applications</string>
+    <string name="heads_up_blacklist_title">Blacklist</string>
+    <string name="add_heads_up_blacklist_summary">Disable heads up for these applications</string>
 
 </resources>

@@ -44,10 +44,10 @@
     <string name="save">Save</string>
     <string name="default_string">Default</string>
     <string name="enable_first">Please enable first</string>
+    <string name="no_browser">Please choose a default browser</string>
     <string name="general_category">General</string>
     <string name="look_category">Look</string>
     <string name="items_category">Items</string>
-    <string name="custom_string">Custom</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -171,7 +171,7 @@
     <string name="show_network_traffic_up">Upload</string>
     <string name="show_network_traffic_down">Download</string>
     <string name="show_network_traffic_all">Both</string>
-    <string name="nettraf_font_size">Single net font size</string>
+    <string name="nettraf_font_size">Single net font size (dp)</string>
     <!-- Statusbar double tap to sleep -->
     <string name="double_tap_to_sleep_title">Status bar double tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
@@ -385,6 +385,10 @@
     <string name="quick_pulldown_left">Left edge</string>
     <string name="quick_pulldown_right">Right edge</string>
     <string name="quick_pulldown_always">Anywhere</string>
+    <!-- QS panels -->
+    <string name="qs_tile_panels_title">Show Panels</string>
+    <string name="qs_tile_panels_summary_enabled">Show QS tile detail view as a panel</string>
+    <string name="qs_tile_panels_summary_disabled">Show QS tile detail view inside the tile area</string>
     <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_enable">Music Visualizer</string>
     <string name="lockscreen_visualizer_enable_summary">Show visualizer bars while playing music</string>
@@ -492,9 +496,6 @@
     <!-- smart notifications -->
     <string name="notification_sound_vib_screen_on_title">Noisy notifications if screen on</string>
     <string name="notification_sound_vib_screen_on_summary">Disable to block notifications sound and vibration when the screen is awake</string>
-    <!-- Gentle notifications header -->
-    <string name="show_gentle_header_title">Show gentle notifications header</string>
-    <string name="show_gentle_header_summary">Wheter to show \"silent notifications\" title above such notifications (SystemUI restart required)</string>
     <!-- flash on call waiting -->
     <string name="flash_on_call_category">Pulse flash</string>
     <string name="flash_on_call_title">Pulse flash on incoming call</string>
@@ -502,6 +503,9 @@
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force expanded notifications</string>
     <string name="force_expanded_notifications_summary">Force apps that support expanded notifications</string>
+    <!-- R Notification headers -->
+    <string name="notification_headers_title">Show notification headers</string>
+    <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
     <!-- Statusbar Clock Font Style, Size & Color -->
     <string name="status_bar_clock_font_style_title">Clock font style</string>
     <string name="status_bar_clock_font_size_title">Clock font size</string>
@@ -791,10 +795,7 @@
     <string name="fod_recog_animation_pureview_future">Future</string>
     <string name="fod_recog_animation_pureview_molecular">Molecular</string>
     <!-- RGB Picker -->
-    <string name="accent_color">Accent picker</string>
-    <string name="accent_summary">System wide accent picker</string>
     <string name="gradient_color">Gradient picker</string>
-    <string name="accent_color_summary">Accent</string>
     <string name="gradient_color_summary">Gradient</string>
     <!-- Text Clock -->
     <string name="text_clock_customizations">Text Clock</string>
@@ -839,46 +840,9 @@
     <string name="about_device_recovery">Recommended Recovery</string>
     <!-- Recovery version -->
     <!-- Recovery link -->
-    <!-- Accent presets -->
-    <string name="accent_preset_0">AOSP Cinnamon</string>
-    <string name="accent_preset_1">AOSP Green</string>
-    <string name="accent_preset_2">AOSP Ocean</string>
-    <string name="accent_preset_3">AOSP Orchid</string>
-    <string name="accent_preset_4">AOSP Purple</string>
-    <string name="accent_preset_5">AOSP Space</string>
-    <string name="accent_preset_6">AndroidOneGreen</string>
-    <string name="accent_preset_7">AospaGreen</string>
-    <string name="accent_preset_8">AtlantisGreen</string>
-    <string name="accent_preset_9">AzureRadiance</string>
-    <string name="accent_preset_10">black</string>
-    <string name="accent_preset_11">CocaColaRed</string>
-    <string name="accent_preset_12">DiscordPurple</string>
-    <string name="accent_preset_13">ElectricViolet</string>
-    <string name="accent_preset_14">FacebookBlue</string>
-    <string name="accent_preset_15">FiBlue</string>
-    <string name="accent_preset_16">InstagramCerise</string>
-    <string name="accent_preset_17">JollibeeCrimson</string>
-    <string name="accent_preset_18">MarsOrange</string>
-    <string name="accent_preset_19">MonsterEnergyGreen</string>
-    <string name="accent_preset_20">NextbitMint</string>
-    <string name="accent_preset_21">NovaYellow</string>
-    <string name="accent_preset_22">OneplusRed</string>
-    <string name="accent_preset_23">PepsiBlue</string>
-    <string name="accent_preset_24">PersianRed</string>
-    <string name="accent_preset_25">PocophoneYellow</string>
-    <string name="accent_preset_26">RazerGreen</string>
-    <string name="accent_preset_27">SamsungBlue</string>
-    <string name="accent_preset_28">SlateSpruce</string>
-    <string name="accent_preset_29">SpotifyGreen</string>
-    <string name="accent_preset_30">StarbucksGreen</string>
-    <string name="accent_preset_31">teal</string>
-    <string name="accent_preset_32">TorchPink</string>
-    <string name="accent_preset_33">TwitchPurple</string>
-    <string name="accent_preset_34">TwitterBlue</string>
-    <string name="accent_preset_35">white</string>
-    <string name="accent_preset_36">XboxGreen</string>
-    <string name="accent_preset_37">XiaomiOrange</string>
-    <string name="accent_preset_title">Accent preset</string>
+    <!-- Heads up -->
+    <string name="heads_up_settings_title">Heads up</string>
+    <string name="heads_up_settings_summary">Configure heads up timeout, snooze timer and more</string>
     <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
     <string name="brightness_slider_qs_unexpanded">MIUI style brightness slider (beta)</string>
@@ -941,4 +905,16 @@
     <!-- Volume panel Hide Things-->
     <string name="tikkiui_hide_things_volumepanel_title">Hide Things below volume panel</string>
     <string name="tikkiui_hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for given time</string>
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Timeout</string>
+    <string name="heads_up_time_out_summary">The time peeking notifications will show for</string>
+    <!-- Heads up blacklists -->
+    <string name="add_heads_up_package">Manage apps</string>
+    <string name="heads_up_stoplist_title">Stoplist</string>
+    <string name="add_heads_up_stoplist_summary">Disable heads up in these applications</string>
+    <string name="heads_up_blacklist_title">Blacklist</string>
+    <string name="add_heads_up_blacklist_summary">Disable heads up for these applications</string>
 </resources>

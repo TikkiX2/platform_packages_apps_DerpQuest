@@ -38,10 +38,6 @@
     <string name="cancel">Annulla</string>
     <string name="save">Salva</string>
     <string name="default_string">Predefinito</string>
-    <string name="enable_first">Perfavore abilita prima</string>
-    <string name="general_category">Generale</string>
-    <string name="look_category">Aspetto</string>
-    <string name="items_category">Elementi</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Seleziona colore</string>
@@ -825,6 +821,10 @@
     <string name="fod_recog_animation_pureview_future">Future</string>
     <string name="fod_recog_animation_pureview_molecular">Molecular</string>
 
+    <!-- RGB Picker -->
+    <string name="accent_color">Selezione colore primario</string>
+    <string name="accent_summary">Seleziona il colore primario a livello di sistema</string>
+
     <!-- Text Clock -->
     <string name="text_clock_customizations">Testo orologio</string>
     <string name="text_clock_alignment">Allineamento</string>
@@ -862,15 +862,6 @@
     <string name="about_devices_git_summary">Visualizza le fonti dei nostri dispositivi su GitHub</string>
     <string name="about_phone_title">Info sul telefono</string>
     <string name="about_phone_summary">Apri la pagina delle informazioni del sistema</string>
-
-    <!-- About - Device specific links -->
-    <string name="about_device_category">Link specifici dispositivo</string>
-    <string name="about_device_fw">Firmware richiesto</string>
-    <string name="about_device_fw_ver" translatable="false"></string> <!-- Firmware version -->
-    <string name="about_device_fw_link" translatable="false"></string> <!-- Firmware link -->
-    <string name="about_device_recovery">Recovery consigliata</string>
-    <string name="about_device_recovery_ver" translatable="false"></string> <!-- Recovery version -->
-    <string name="about_device_recovery_link" translatable="false"></string> <!-- Recovery link -->
 
     <!-- Accent presets -->
     <string name="accent_preset_0">AOSP Cinnamon</string>
@@ -912,5 +903,9 @@
     <string name="accent_preset_36">XboxGreen</string>
     <string name="accent_preset_37">XiaomiOrange</string>
     <string name="accent_preset_title">Colore primario predefinito</string>
+    <!-- About - Device specific links -->
+    <string name="about_device_category">Link specifici dispositivo</string>
+    <string name="about_device_fw">Firmware richiesto</string>
+    <string name="about_device_recovery">Recovery consigliata</string>
 
 </resources>

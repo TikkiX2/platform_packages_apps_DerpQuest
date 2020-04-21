@@ -49,6 +49,7 @@
     <string name="general_category">General</string>
     <string name="look_category">Look</string>
     <string name="items_category">Items</string>
+    <string name="custom_string">Custom</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

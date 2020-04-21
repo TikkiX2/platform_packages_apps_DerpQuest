@@ -18,10 +18,13 @@ package com.derpquest.settings.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.om.IOverlayManager;
+import android.content.om.OverlayInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -44,11 +47,14 @@ import com.android.settings.search.Indexable;
 
 import com.derpquest.settings.preferences.CustomSeekBarPreference;
 
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class ThemeSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -151,13 +157,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mCornerRadius) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_ROUNDED_SIZE,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mContentPadding) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mSBPadding) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_STATUS_BAR_PADDING,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_STATUS_BAR_PADDING,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mRoundedFwvals) {
             restoreCorners();
@@ -200,8 +209,23 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private boolean isBrowseThemesAvailable() {
         PackageManager pm = getPackageManager();
         Intent browse = new Intent();
-        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
+        browse.setClassName("com.android.customization",
+                "com.android.customization.picker.CustomizationPickerActivity");
         return pm.resolveActivity(browse, 0) != null;
+    }
+
+    private void checkColorPreset(String colorValue) {
+        List<String> colorPresets = Arrays.asList(
+                getResources().getStringArray(R.array.accent_presets_values));
+        if (colorPresets.contains(colorValue)) {
+            mAccentPreset.setValue(colorValue);
+            int index = mAccentPreset.findIndexOfValue(colorValue);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+        }
+        else {
+            mAccentPreset.setSummary(
+                    getResources().getString(R.string.custom_string));
+        }
     }
 
     private void restoreCorners() {

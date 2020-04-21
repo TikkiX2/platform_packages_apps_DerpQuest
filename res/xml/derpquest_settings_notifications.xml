@@ -74,7 +74,7 @@
             android:summary="@string/enable_clear_all_button_summary"
             android:defaultValue="true" />
 
-        <Preference
+        <com.derpquest.settings.preferences.GlobalSettingMasterSwitchPreference
             android:key="heads_up_settings"
             android:title="@string/heads_up_settings_title"
             android:summary="@string/heads_up_settings_summary"

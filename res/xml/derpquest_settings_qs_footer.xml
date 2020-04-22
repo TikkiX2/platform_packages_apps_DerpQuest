@@ -62,6 +62,14 @@
     <com.derpquest.settings.preferences.SystemSettingSwitchPreference
         android:key="tikkiui_footer_text_musicalize"
         android:title="@string/tikkiui_footer_text_musicalize_show_title"
+        android:dependency="tikkiui_footer_text_show"
+        android:defaultValue="true" />
+
+    <!-- Center QS footer text gradient -->
+    <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+        android:key="tikkiui_footer_text_center"
+        android:title="@string/tikkiui_footer_text_center_title"
+        android:dependency="tikkiui_footer_text_show"
         android:defaultValue="true" />
 
     <!-- QS footer text string -->

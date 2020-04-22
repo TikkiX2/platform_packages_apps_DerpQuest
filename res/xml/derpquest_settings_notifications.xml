@@ -74,6 +74,12 @@
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="tikkiui_center_notification_headers"
+            android:title="@string/tikkiui_center_notification_headers_title"
+            android:summary="@string/tikkiui_center_notification_headers_summary"
+            android:defaultValue="true" />
+
         <com.derpquest.settings.preferences.GlobalSettingMasterSwitchPreference
             android:key="heads_up_settings"
             android:title="@string/heads_up_settings_title"

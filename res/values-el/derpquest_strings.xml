@@ -674,16 +674,12 @@
     <string name="about_devices_git_summary">Δείτε τις πηγές του κώδικα της συσκευής στο GitHub</string>
     <string name="about_phone_title">Σχετικά με τη συσκευή</string>
     <string name="about_phone_summary">Άνοιξε την σχετική σελίδα του συστήματος</string>
-     
-    <!-- About - Device specific links -->
-    <string name="about_device_category">Πρόσθετες λήψεις συσκευής</string>
-    <string name="about_device_fw">Προτεινόμενο λογισμικό (firmware)</string>
-    <string name="about_device_recovery">Προτεινόμενη ανάκτηση(Recovery)</string>
 
     <!-- About - Device specific links -->
     <string name="about_device_category">Πρόσθετες λήψεις συσκευής</string>
     <string name="about_device_fw">Προτεινόμενο λογισμικό (firmware)</string>
     <string name="about_device_recovery">Προτεινόμενη ανάκτηση(Recovery)</string>
+
     <!-- Running Services button -->
     <string name="qs_running_services_title">Εικονίδιο εκτελούμενων εργασιών</string>
     <string name="qs_running_services_summary">Ενεργοποιήστε το εικονίδιο των εκτελούμενων εργασιών στο κάτω μέρος</string>

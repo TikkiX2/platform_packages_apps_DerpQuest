@@ -47,6 +47,7 @@ import com.android.settings.search.Indexable;
 
 import com.derpquest.settings.preferences.CustomSeekBarPreference;
 
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -156,13 +157,16 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mCornerRadius) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_ROUNDED_SIZE,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mContentPadding) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mSBPadding) {
-            Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_STATUS_BAR_PADDING,
+            Settings.Secure.putIntForUser(getContext().getContentResolver(),
+                    Settings.Secure.SYSUI_STATUS_BAR_PADDING,
                     (int) newValue, UserHandle.USER_CURRENT);
         } else if (preference == mRoundedFwvals) {
             restoreCorners();
@@ -205,18 +209,23 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private boolean isBrowseThemesAvailable() {
         PackageManager pm = getPackageManager();
         Intent browse = new Intent();
-        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
+        browse.setClassName("com.android.customization",
+                "com.android.customization.picker.CustomizationPickerActivity");
         return pm.resolveActivity(browse, 0) != null;
     }
 
-    private void setupAccentPref() {
-        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
-        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
-        int color = "-1".equals(colorVal)
-                ? Color.WHITE
-                : Color.parseColor("#" + colorVal);
-        mThemeColor.setNewPreviewColor(color);
-        mThemeColor.setOnPreferenceChangeListener(this);
+    private void checkColorPreset(String colorValue) {
+        List<String> colorPresets = Arrays.asList(
+                getResources().getStringArray(R.array.accent_presets_values));
+        if (colorPresets.contains(colorValue)) {
+            mAccentPreset.setValue(colorValue);
+            int index = mAccentPreset.findIndexOfValue(colorValue);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+        }
+        else {
+            mAccentPreset.setSummary(
+                    getResources().getString(R.string.custom_string));
+        }
     }
 
     private void restoreCorners() {

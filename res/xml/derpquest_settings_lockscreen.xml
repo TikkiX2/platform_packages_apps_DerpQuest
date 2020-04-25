@@ -110,6 +110,12 @@
             android:summary="@string/tikkiui_lock_cool_divider_show_summary"
             android:defaultValue="true" />
 
+        <!-- Lockscreen Align to left -->
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="tikkiui_align_lockscreen_left"
+            android:title="@string/tikkiui_align_lockscreen_left_title"
+            android:defaultValue="false" />
+
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_show_status_bar"
             android:title="@string/lockscreen_show_status_bar_title"

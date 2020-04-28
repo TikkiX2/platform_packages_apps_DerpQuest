@@ -114,7 +114,17 @@
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="tikkiui_align_lockscreen_left"
             android:title="@string/tikkiui_align_lockscreen_left_title"
+            android:summary="@string/tikkiui_align_lockscreen_left_summary"
             android:defaultValue="false" />
+
+        <com.derpquest.settings.preferences.SystemSettingSeekBarPreference
+            android:key="tikkiui_align_left_margin"
+            android:title="@string/tikkiui_align_lockscreen_left_margin"
+            android:max="100"
+            android:min="0"
+            android:dependency="tikkiui_align_lockscreen_left"
+            settings:units="dp"
+            android:defaultValue="55" />
 
         <com.derpquest.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_show_status_bar"

@@ -20,6 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_info_title">
 
+    <!-- Toggle OneUI Date Format -->
+    <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+        android:key="tikkiui_oneui_date_format"
+        android:title="@string/tikkiui_oneui_date_format_title"
+        android:summary="@string/tikkiui_oneui_date_format_summary"
+        android:defaultValue="false" />
+
     <com.derpquest.settings.preferences.SecureSettingListPreference
         android:key="lockscreen_date_selection"
         android:title="@string/lockscreen_date_selection_title"

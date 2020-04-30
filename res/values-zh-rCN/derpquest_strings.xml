@@ -960,4 +960,11 @@
     <!-- Center R Notification headers -->
     <string name="tikkiui_center_notification_headers_title">Center notification headers</string>
     <string name="tikkiui_center_notification_headers_summary">Whether to Center R style notification headers (Requires a SystemUI restart)</string>
+    <!-- Align to left lockscreen items -->
+    <string name="tikkiui_align_lockscreen_left_title">Align Lockscreen Items to Left</string>
+    <string name="tikkiui_align_lockscreen_left_summary">Align to left or center the lockscreen items</string>
+    <string name="tikkiui_align_lockscreen_left_margin">Left Edge Margin</string>
+    <!-- Toggle OneUI Date Format -->
+    <string name="tikkiui_oneui_date_format_title">Toggle OneUI Date Format</string>
+    <string name="tikkiui_oneui_date_format_summary">Toggle OneUI Date Format (eee, MMMM dd)</string>
 </resources>

@@ -1132,4 +1132,9 @@
     <string name="sb_battery_bar_high_color">High level color"</string>
     <string name="sb_battery_bar_low_color">Low level color"</string>
 
+    <!-- Align to left lockscreen items -->
+    <string name="tikkiui_align_lockscreen_left_title">Align Lockscreen Items to Left</string>
+    <string name="tikkiui_align_lockscreen_left_summary">Align to left or center the lockscreen items</string>
+    <string name="tikkiui_align_lockscreen_left_margin">Left Edge Margin</string>
+
 </resources>

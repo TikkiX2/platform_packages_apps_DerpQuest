@@ -939,6 +939,7 @@
     <string name="tikkiui_footer_text_string_title">Customize text</string>
     <string name="tikkiui_footer_text_string_summary">Set to empty for default #DerpFest TikkiBuild</string>
     <string name="tikkiui_footer_text_center_title">Center QS footer text (in QS Panel no expanded)</string>
+    <string name="tikkiui_footer_text_musicalize_show_title">Show Music Info in QS footer text (in QS Panel no expanded)</string>
     <!-- Cool Dividers WITH GRADIENT -->
     <string name="tikkiui_lock_cool_divider_show_title">Show Cool Dividers</string>
     <string name="tikkiui_lock_cool_divider_show_summary">Show two cool dividers on the lockscreen (with gradient)</string>
@@ -970,4 +971,14 @@
     <!-- Toggle OneUI Date Format -->
     <string name="tikkiui_oneui_date_format_title">Toggle OneUI Date Format</string>
     <string name="tikkiui_oneui_date_format_summary">Toggle OneUI Date Format (eee, MMMM dd)</string>
+    <!-- Show Visualizer in QSPanel -->
+    <string name="synthos_visualizer_qspanel_title">Show Music Visualizer in QS Panel</string>
+    <!-- SynthOS Settings -->
+    <string name="synthui_category_title">SynthUI</string>
+    <string name="synthui_gradient_clock_qsextended_title">Add Gradient in Clock</string>
+    <string name="synthui_gradient_clock_qsextended_summary">Add a Gradient in Clock of QS Header Extended</string>
+    <string name="synthui_gradient_date_qsextended_title">Add Gradient in Date</string>
+    <string name="synthui_gradient_date_qsextended_summary">Add a Gradient in Date of QS Header Extended</string>
+    <string name="synthui_statusicons_qsextended_title">Show Status Icons in QS Header</string>
+    <string name="synthui_statusinfo_qsextended_title">Show Status Info in QS Header</string>
 </resources>

@@ -40,4 +40,31 @@
         android:summary="@string/qs_clock_summary"
         android:defaultValue="true" />
 
+    <PreferenceCategory
+        android:title="@string/synthui_category_title">
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="synthui_gradient_clock_qsextended"
+            android:title="@string/synthui_gradient_clock_qsextended_title"
+            android:summary="@string/synthui_gradient_clock_qsextended_summary"
+            android:defaultValue="true" />
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="synthui_gradient_date_qsextended"
+            android:title="@string/synthui_gradient_date_qsextended_title"
+            android:summary="@string/synthui_gradient_date_qsextended_summary"
+            android:defaultValue="true" />
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="synthui_statusicons_qsextended"
+            android:title="@string/synthui_statusicons_qsextended_title"
+            android:defaultValue="true" />
+
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="synthui_statusinfo_qsextended"
+            android:title="@string/synthui_statusinfo_qsextended_title"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

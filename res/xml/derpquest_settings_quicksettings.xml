@@ -50,6 +50,12 @@
             android:summary="@string/qs_bg_use_new_tint_summary"
             android:defaultValue="false" />
 
+        <!-- Visualizer QSPanel -->
+        <com.derpquest.settings.preferences.SystemSettingSwitchPreference
+            android:key="synthos_visualizer_qspanel"
+            android:title="@string/synthos_visualizer_qspanel_title"
+            android:defaultValue="true" />
+
         <!-- Blur Settings -->
         <com.derpquest.settings.preferences.SystemSettingMasterSwitchPreference
             android:key="qs_blur"

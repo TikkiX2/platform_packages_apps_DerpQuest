@@ -1118,6 +1118,9 @@
     <string name="tikkiui_oneui_date_format_title">Toggle OneUI Date Format</string>
     <string name="tikkiui_oneui_date_format_summary">Toggle OneUI Date Format (eee, MMMM dd)</string>
 
+    <!-- Show Visualizer in QSPanel -->
+    <string name="synthos_visualizer_qspanel_title">Show Music Visualizer in QS Panel</string>
+
     <!-- SynthOS Settings -->
     <string name="synthui_category_title">SynthUI</string>
 
